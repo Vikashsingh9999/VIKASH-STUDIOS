@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Verification - {{CERTIFICATE_ID}} | Vikash Studios</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Icons -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <style>
+        .glass {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        @keyframes successBounce {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .success-icon { animation: successBounce 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+    </style>
+</head>
+
+<body class="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <nav class="w-full border-b border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 glass">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="text-lg font-semibold tracking-tighter flex items-center gap-2">
+                VIKASH STUDIOS
+            </a>
+            <a href="/" class="text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">
+                Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center py-20 px-4">
+        <div class="max-w-2xl w-full border border-zinc-200 dark:border-zinc-800 rounded-2xl bg-zinc-50 dark:bg-zinc-900/50 shadow-lg p-8 md:p-12 text-center">
+            
+            <div class="w-20 h-20 mx-auto bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-6 success-icon">
+                <span class="iconify text-green-600 dark:text-green-400" data-icon="lucide:check" data-width="40"></span>
+            </div>
+
+            <h1 class="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white mb-2">Certificate Verified</h1>
+            <p class="text-green-600 dark:text-green-400 font-medium mb-8">This certificate is authentic and valid.</p>
+
+            <div class="bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 rounded-xl p-6 mb-8 text-left grid grid-cols-1 md:grid-cols-2 gap-6 shadow-sm">
+                <div>
+                    <p class="text-xs text-zinc-500 uppercase tracking-wider mb-1">Candidate Name</p>
+                    <p class="font-medium text-lg text-zinc-900 dark:text-white">{{CANDIDATE_NAME}}</p>
+                </div>
+                <div>
+                    <p class="text-xs text-zinc-500 uppercase tracking-wider mb-1">Certificate ID</p>
+                    <p class="font-medium font-mono text-zinc-900 dark:text-white">{{CERTIFICATE_ID}}</p>
+                </div>
+                <div>
+                    <p class="text-xs text-zinc-500 uppercase tracking-wider mb-1">Issuer</p>
+                    <p class="font-medium text-zinc-900 dark:text-white">Vikash Studios</p>
+                </div>
+                <div>
+                    <p class="text-xs text-zinc-500 uppercase tracking-wider mb-1">Status</p>
+                    <p class="text-green-600 dark:text-green-400 font-medium flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-green-500"></span> Verified
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="../../Certificate_PDF/{{CERTIFICATE_ID}}.pdf" target="_blank" class="inline-flex h-11 items-center justify-center rounded-md bg-zinc-900 px-8 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90">
+                    View Original PDF
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-200 dark:border-zinc-800 py-6">
+        <div class="max-w-7xl mx-auto px-6 text-center text-sm text-zinc-500">
+            &copy; 2026 Vikash Studios. Verified Credentials.
+        </div>
+    </footer>
+
+</body>
+</html>

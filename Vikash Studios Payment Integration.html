@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway Integration Services | Vikash Studios | Secure Online Payment Solutions</title>
+
+    <meta name="description" content="Vikash Studios provides secure payment gateway integration services for businesses across India. Integrate Razorpay, Stripe, PayPal & custom payment solutions for websites & apps." />
+    <meta name="keywords" content="payment gateway integration, online payment solutions, Razorpay integration, Stripe India, PayPal integration, secure payment processing, e-commerce payment gateway, payment gateway India" />
+    <meta name="author" content="Vikash Studios" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.vikashstudios.online/payment-gateway-integration" />
+    
+    <!-- Open Graph Tags for Social Sharing -->
+    <meta property="og:title" content="Professional Payment Gateway Integration Services | Vikash Studios">
+    <meta property="og:description" content="Secure payment gateway integration for Indian businesses. Integrate Razorpay, Stripe, PayPal & custom payment solutions.">
+    <meta property="og:image" content="https://www.vikashstudios.online/images/payment-gateway-integration-og.jpg">
+    <meta property="og:url" content="https://www.vikashstudios.online/payment-gateway-integration">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Payment Gateway Integration Services | Vikash Studios">
+    <meta name="twitter:description" content="Secure payment gateway integration for websites and mobile applications across India.">
+    <meta name="twitter:image" content="https://www.vikashstudios.online/images/payment-gateway-integration-twitter.jpg">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Payment Gateway Integration Services",
+      "provider": {
+        "@type": "Organization",
+        "name": "Vikash Studios",
+        "url": "https://www.vikashstudios.online",
+        "logo": "https://www.vikashstudios.com/Vikash Studios Logo.png",
+        "sameAs": [
+          "https://www.instagram.com/vikashstudios.online",
+          "https://www.linkedin.com/company/vikashstudios",
+          "https://github.com/vikashstudios.code"
+        ]
+      },
+      "description": "Professional payment gateway integration services including Razorpay, Stripe, PayPal integration for websites and mobile applications.",
+      "serviceType": "Payment Gateway Integration",
+      "areaServed": "India",
+      "offers": {
+        "@type": "Offer",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "INR"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Payment Gateway Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Razorpay Integration"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Stripe Integration"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "PayPal Integration"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom Payment Solutions"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Icons -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <style>
+        /* Custom Utilities */
+        .glass {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        body, div, nav, footer, section, h1, h2, h3, p, span, a, button {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, transform;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Custom styles for payment gateway page */
+        .gradient-bg {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        
+        .dark .gradient-bg {
+            background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 100%);
+        }
+        
+        .payment-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .dark .payment-card {
+            border-color: #334155;
+        }
+        
+        .payment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dark .payment-card:hover {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background-color: #e0f2fe;
+            color: #0369a1;
+        }
+        
+        .dark .feature-icon {
+            background-color: rgba(14, 165, 233, 0.2);
+            color: #7dd3fc;
+        }
+        
+        .process-step {
+            position: relative;
+        }
+        
+        .process-step:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 24px;
+            width: 2px;
+            height: calc(100% - 50px);
+            background-color: #cbd5e1;
+            z-index: 0;
+        }
+        
+        .dark .process-step:not(:last-child):after {
+            background-color: #475569;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50 font-sans antialiased selection:bg-zinc-200 dark:selection:bg-zinc-800">
+    <!-- Header (same as provided) -->
+    <nav class="fixed top-0 w-full z-50 border-b border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 glass">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between relative z-50">
+            <!-- Logo -->
+            <a href="https://www.vikashstudios.online" class="text-lg font-semibold tracking-tighter flex items-center gap-2">
+                VIKASH STUDIOS
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                <a href="https://www.vikashstudios.online#services" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Services</a>
+                <a href="https://www.vikashstudios.online#projects" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="https://www.vikashstudios.online#about" class="hover:text-zinc-900 dark:hover:text-white transition-colors">About</a>
+                <a href="https://www.vikashstudios.online#founders" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Team</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 transition-colors">
+                    <span class="iconify block dark:hidden" data-icon="lucide:sun" data-width="20" data-stroke-width="1.5"></span>
+                    <span class="iconify hidden dark:block" data-icon="lucide:moon" data-width="20" data-stroke-width="1.5"></span>
+                </button>
+                
+                <!-- Desktop CTA -->
+                <a href="https://wa.me/9096113197?text=Hi,%20I'm%20interested%20in%20Payment%20Gateway%20Integration%20services." class="hidden md:inline-flex h-9 items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 dark:focus-visible:ring-zinc-300">
+                    Get Started
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 -mr-2 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-white transition-colors">
+                    <span class="iconify" id="menu-icon-open" data-icon="lucide:menu" data-width="24" data-stroke-width="1.5"></span>
+                    <span class="iconify hidden" id="menu-icon-close" data-icon="lucide:x" data-width="24" data-stroke-width="1.5"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-x-0 top-16 z-40 hidden md:hidden border-b border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl h-[calc(100vh-4rem)] overflow-y-auto transform origin-top transition-all duration-300">
+            <div class="px-6 py-8 space-y-6">
+                <nav class="flex flex-col space-y-6 text-base font-medium text-zinc-600 dark:text-zinc-400">
+                    <a href="https://www.vikashstudios.online#services" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800/50 hover:text-zinc-900 dark:hover:text-white">
+                        Services <span class="iconify opacity-50" data-icon="lucide:chevron-right" data-width="16"></span>
+                    </a>
+                    <a href="https://www.vikashstudios.online#projects" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800/50 hover:text-zinc-900 dark:hover:text-white">
+                        Projects <span class="iconify opacity-50" data-icon="lucide:chevron-right" data-width="16"></span>
+                    </a>
+                    <a href="https://www.vikashstudios.online#about" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800/50 hover:text-zinc-900 dark:hover:text-white">
+                        About <span class="iconify opacity-50" data-icon="lucide:chevron-right" data-width="16"></span>
+                    </a>
+                    <a href="https://www.vikashstudios.online#founders" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800/50 hover:text-zinc-900 dark:hover:text-white">
+                        Team <span class="iconify opacity-50" data-icon="lucide:chevron-right" data-width="16"></span>
+                    </a>
+                </nav>
+                
+                <div class="pt-4">
+                    <a href="https://wa.me/9096113197?text=Hi,%20I'm%20interested%20in%20Payment%20Gateway%20Integration%20services." class="mobile-link w-full flex h-11 items-center justify-center rounded-md bg-zinc-900 px-4 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90">
+                        Contact Us
+                    </a>
+                </div>
+
+                <div class="pt-8 mt-8 border-t border-zinc-100 dark:border-zinc-800 flex justify-center gap-8">
+                    <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:twitter" data-width="20"></span></a>
+                    <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:github" data-width="20"></span></a>
+                    <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:linkedin" data-width="20"></span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="gradient-bg py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+                            Secure <span class="text-primary-600 dark:text-primary-400">Payment Gateway</span> Integration Services
+                        </h1>
+                        <p class="text-lg text-zinc-600 dark:text-zinc-300 mb-8 max-w-2xl">
+                            Integrate secure, reliable payment processing into your website or application with our expert payment gateway integration services. We support Razorpay, Stripe, PayPal, and custom solutions tailored for Indian businesses.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://wa.me/9096113197?text=Hi,%20I%20need%20Payment%20Gateway%20Integration%20for%20my%20business." class="inline-flex h-12 items-center justify-center rounded-md bg-zinc-900 px-6 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90">
+                                Get Free Consultation
+                            </a>
+                            <a href="#process" class="inline-flex h-12 items-center justify-center rounded-md border border-zinc-300 dark:border-zinc-700 px-6 text-sm font-medium shadow-sm transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800">
+                                How It Works
+                            </a>
+                        </div>
+                        <div class="mt-12 grid grid-cols-3 gap-6">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-primary-600 dark:text-primary-400">99.9%</div>
+                                <div class="text-sm text-zinc-500 dark:text-zinc-400">Uptime</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-primary-600 dark:text-primary-400">24/7</div>
+                                <div class="text-sm text-zinc-500 dark:text-zinc-400">Support</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-primary-600 dark:text-primary-400">PCI DSS</div>
+                                <div class="text-sm text-zinc-500 dark:text-zinc-400">Compliant</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="relative z-10 bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl p-8 border border-zinc-200 dark:border-zinc-800">
+                            <div class="flex justify-between items-center mb-8">
+                                <h3 class="text-xl font-semibold">Payment Integration Demo</h3>
+                                <span class="flex h-3 w-3">
+                                    <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-green-400 opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                                </span>
+                            </div>
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-4 p-4 rounded-lg bg-zinc-50 dark:bg-zinc-800">
+                                    <div class="feature-icon">
+                                        <span class="iconify" data-icon="fa:credit-card" data-width="24"></span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Multiple Payment Options</h4>
+                                        <p class="text-sm text-zinc-500 dark:text-zinc-400">Cards, UPI, Net Banking, Wallets</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 p-4 rounded-lg bg-zinc-50 dark:bg-zinc-800">
+                                    <div class="feature-icon">
+                                        <span class="iconify" data-icon="mdi:shield-check" data-width="24"></span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Bank-Level Security</h4>
+                                        <p class="text-sm text-zinc-500 dark:text-zinc-400">PCI DSS Compliant</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 p-4 rounded-lg bg-zinc-50 dark:bg-zinc-800">
+                                    <div class="feature-icon">
+                                        <span class="iconify" data-icon="carbon:mobile-check" data-width="24"></span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">Mobile Responsive</h4>
+                                        <p class="text-sm text-zinc-500 dark:text-zinc-400">Works on all devices</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-8 pt-8 border-t border-zinc-200 dark:border-zinc-800">
+                                <p class="text-sm text-zinc-500 dark:text-zinc-400 text-center">
+                                    Get your payment gateway integrated in <span class="font-semibold text-primary-600 dark:text-primary-400">3-7 business days</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-32 h-32 bg-primary-500 rounded-full opacity-20 animate-pulse-slow"></div>
+                        <div class="absolute -bottom-6 -left-6 w-40 h-40 bg-primary-500 rounded-full opacity-10 animate-float"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Supported Gateways -->
+        <section class="py-16 bg-zinc-50 dark:bg-zinc-900/50">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Supported Payment Gateways</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-6 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-2xl mb-2">💳</div>
+                            <span class="font-medium">Razorpay</span>
+                        </div>
+                    </div>
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-6 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-2xl mb-2">🔶</div>
+                            <span class="font-medium">Stripe</span>
+                        </div>
+                    </div>
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-6 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-2xl mb-2">🔵</div>
+                            <span class="font-medium">PayPal</span>
+                        </div>
+                    </div>
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-6 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-2xl mb-2">🏦</div>
+                            <span class="font-medium">PayU</span>
+                        </div>
+                    </div>
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-6 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-2xl mb-2">📱</div>
+                            <span class="font-medium">Paytm</span>
+                        </div>
+                    </div>
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-6 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-2xl mb-2">➕</div>
+                            <span class="font-medium">Custom</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="py-16" id="benefits">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4">Why Choose Our Payment Integration Services?</h2>
+                <p class="text-lg text-zinc-600 dark:text-zinc-300 text-center mb-12 max-w-3xl mx-auto">
+                    We provide comprehensive payment gateway solutions that enhance user experience and maximize conversion rates for your business.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-8">
+                        <div class="feature-icon mb-6">
+                            <span class="iconify" data-icon="mdi:shield-lock" data-width="24"></span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Bank-Level Security</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">
+                            PCI DSS compliant integration with encryption, fraud detection, and secure tokenization to protect sensitive customer data.
+                        </p>
+                    </div>
+                    
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-8">
+                        <div class="feature-icon mb-6">
+                            <span class="iconify" data-icon="mdi:cash-multiple" data-width="24"></span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Multiple Payment Methods</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">
+                            Support for credit/debit cards, UPI, net banking, digital wallets, and EMI options to cater to all customer preferences.
+                        </p>
+                    </div>
+                    
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-8">
+                        <div class="feature-icon mb-6">
+                            <span class="iconify" data-icon="mdi:cellphone" data-width="24"></span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Mobile-First Design</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">
+                            Optimized checkout experience for mobile devices with responsive design that works seamlessly across all screen sizes.
+                        </p>
+                    </div>
+                    
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-8">
+                        <div class="feature-icon mb-6">
+                            <span class="iconify" data-icon="mdi:chart-line" data-width="24"></span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Higher Conversion Rates</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">
+                            Streamlined checkout process reduces cart abandonment and increases successful transaction completion.
+                        </p>
+                    </div>
+                    
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-8">
+                        <div class="feature-icon mb-6">
+                            <span class="iconify" data-icon="mdi:sync" data-width="24"></span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Recurring Billing</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">
+                            Set up subscription models with automated recurring payments for SaaS products and membership services.
+                        </p>
+                    </div>
+                    
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-8">
+                        <div class="feature-icon mb-6">
+                            <span class="iconify" data-icon="mdi:headphones" data-width="24"></span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">24/7 Technical Support</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">
+                            Round-the-clock support for payment gateway issues, transaction failures, and integration troubleshooting.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="py-16 bg-zinc-50 dark:bg-zinc-900/50" id="process">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4">Our Payment Integration Process</h2>
+                <p class="text-lg text-zinc-600 dark:text-zinc-300 text-center mb-12 max-w-3xl mx-auto">
+                    A streamlined 5-step process to get your payment gateway up and running efficiently.
+                </p>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="space-y-12">
+                        <div class="process-step flex gap-6">
+                            <div class="flex-shrink-0 relative z-10">
+                                <div class="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center">
+                                    <span class="text-primary-600 dark:text-primary-400 font-bold">1</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Requirement Analysis</h3>
+                                <p class="text-zinc-600 dark:text-zinc-400">
+                                    We analyze your business model, target audience, transaction volume, and preferred payment methods to recommend the best gateway solution.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step flex gap-6">
+                            <div class="flex-shrink-0 relative z-10">
+                                <div class="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center">
+                                    <span class="text-primary-600 dark:text-primary-400 font-bold">2</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Gateway Selection & Setup</h3>
+                                <p class="text-zinc-600 dark:text-zinc-400">
+                                    We help you choose between Razorpay, Stripe, PayPal, or other providers and set up your merchant account with necessary documentation.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step flex gap-6">
+                            <div class="flex-shrink-0 relative z-10">
+                                <div class="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center">
+                                    <span class="text-primary-600 dark:text-primary-400 font-bold">3</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Technical Integration</h3>
+                                <p class="text-zinc-600 dark:text-zinc-400">
+                                    Our developers integrate the payment gateway API into your website or application with proper error handling and security measures.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step flex gap-6">
+                            <div class="flex-shrink-0 relative z-10">
+                                <div class="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center">
+                                    <span class="text-primary-600 dark:text-primary-400 font-bold">4</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Testing & Quality Assurance</h3>
+                                <p class="text-zinc-600 dark:text-zinc-400">
+                                    We conduct thorough testing in sandbox environment for all payment methods, failed transactions, and edge cases.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step flex gap-6">
+                            <div class="flex-shrink-0 relative z-10">
+                                <div class="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center">
+                                    <span class="text-primary-600 dark:text-primary-400 font-bold">5</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Go Live & Support</h3>
+                                <p class="text-zinc-600 dark:text-zinc-400">
+                                    We deploy to production, monitor initial transactions, and provide ongoing support for any payment-related issues.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="py-16" id="pricing">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-4">Transparent Pricing</h2>
+                <p class="text-lg text-zinc-600 dark:text-zinc-300 text-center mb-12 max-w-3xl mx-auto">
+                    Flexible pricing plans tailored to businesses of all sizes. No hidden fees.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-8 border-2 border-zinc-200 dark:border-zinc-800">
+                        <h3 class="text-xl font-semibold mb-4">Basic Integration</h3>
+                        <div class="mb-6">
+                            <span class="text-3xl font-bold">₹8,999</span>
+                            <span class="text-zinc-500 dark:text-zinc-400"> one-time</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2">
+                                <span class="iconify text-green-500" data-icon="mdi:check-circle" data-width="16"></span>
+                                <span>Single Payment Gateway Integration</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="iconify text-green-500" data-icon="mdi:check-circle" data-width="16"></span>
+                                <span>Standard Payment Methods (Cards, UPI)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="iconify text-green-500" data-icon="mdi:check-circle" data-width="16"></span>
+                                <span>Basic Checkout Design</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="iconify text-green-500" data-icon="mdi:check-circle" data-width="16"></span>
+                                <span>30 Days Technical Support</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/9096113197?text=Hi,%20I'm%20interested%20in%20Basic%20Payment%20Integration%20Plan." class="w-full inline-flex h-12 items-center justify-center rounded-md bg-zinc-900 px-6 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90">
+                            Get Started
+                        </a>
+                    </div>
+                    
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-8 border-2 border-primary-500 relative">
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                            <span class="bg-primary-500 text-white text-sm font-medium px-4 py-1 rounded-full">Most Popular</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Advanced Integration</h3>
+                        <div class="mb-6">
+                            <span class="text-3xl font-bold">₹14,999</span>
+                            <span class="text-zinc-500 dark:text-zinc-400"> one-time</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2">
+                                <span class="iconify text-green-500" data-icon="mdi:check-circle" data-width="16"></span>
+                                <span>Multiple Payment Gateways</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="iconify text-green-500" data-icon="mdi:check-circle" data-width="16"></span>
+                                <span>All Payment Methods (Cards, UPI, Wallets, NB)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="iconify text-green-500" data-icon="mdi:check-circle" data-width="16"></span>
+                                <span>Custom Checkout Design</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="iconify text-green-500" data-icon="mdi:check-circle" data-width="16"></span>
+                                <span>Recurring Billing Setup</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="iconify text-green-500" data-icon="mdi:check-circle" data-width="16"></span>
+                                <span>90 Days Technical Support</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/9096113197?text=Hi,%20I'm%20interested%20in%20Advanced%20Payment%20Integration%20Plan." class="w-full inline-flex h-12 items-center justify-center rounded-md bg-primary-600 px-6 text-sm font-medium text-white shadow transition-colors hover:bg-primary-700">
+                            Get Started
+                        </a>
+                    </div>
+                    
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-8 border-2 border-zinc-200 dark:border-zinc-800">
+                        <h3 class="text-xl font-semibold mb-4">Enterprise Solution</h3>
+                        <div class="mb-6">
+                            <span class="text-3xl font-bold">Custom</span>
+                            <span class="text-zinc-500 dark:text-zinc-400"> pricing</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2">
+                                <span class="iconify text-green-500" data-icon="mdi:check-circle" data-width="16"></span>
+                                <span>Multiple Gateway Integration</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="iconify text-green-500" data-icon="mdi:check-circle" data-width="16"></span>
+                                <span>Custom Payment Flow Development</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="iconify text-green-500" data-icon="mdi:check-circle" data-width="16"></span>
+                                <span>Fraud Detection & Prevention</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="iconify text-green-500" data-icon="mdi:check-circle" data-width="16"></span>
+                                <span>Dedicated Account Manager</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="iconify text-green-500" data-icon="mdi:check-circle" data-width="16"></span>
+                                <span>6 Months Support & Maintenance</span>
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/9096113197?text=Hi,%20I'm%20interested%20in%20Enterprise%20Payment%20Integration%20Solution." class="w-full inline-flex h-12 items-center justify-center rounded-md bg-zinc-900 px-6 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90">
+                            Contact Sales
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <p class="text-zinc-600 dark:text-zinc-400">
+                        <span class="font-medium">Note:</span> Pricing does not include gateway transaction fees charged by payment providers (typically 1.5-3% per transaction).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16 bg-zinc-50 dark:bg-zinc-900/50" id="faq">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+                
+                <div class="space-y-6">
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold mb-2">Which payment gateway is best for my business in India?</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">
+                            For most Indian businesses, Razorpay offers excellent support for UPI, cards, and net banking with competitive rates. For international transactions, Stripe or PayPal are recommended. We analyze your specific needs to recommend the best option.
+                        </p>
+                    </div>
+                    
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold mb-2">How long does payment gateway integration take?</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">
+                            Simple integration typically takes 3-5 business days. Complex integrations with custom features may take 1-2 weeks. The timeline also depends on how quickly you can provide required business documents for gateway approval.
+                        </p>
+                    </div>
+                    
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold mb-2">What documents are required for payment gateway setup?</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">
+                            Typically you need: Business registration documents, PAN card, GST certificate (if applicable), bank account details, cancelled cheque, and identity/address proof of directors. Requirements vary by gateway provider.
+                        </p>
+                    </div>
+                    
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold mb-2">Do you provide support after integration?</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">
+                            Yes, all our packages include post-integration support. Basic plan includes 30 days support, Advanced includes 90 days, and Enterprise includes 6 months of support and maintenance. We also offer annual maintenance contracts.
+                        </p>
+                    </div>
+                    
+                    <div class="payment-card bg-white dark:bg-zinc-900 rounded-xl p-6">
+                        <h3 class="text-lg font-semibold mb-2">Can I switch payment gateways later if needed?</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">
+                            Absolutely. We design integrations to be modular, making it easier to switch or add additional gateways in the future. We can help you migrate to a different gateway with minimal downtime.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 gradient-bg">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-6">Ready to Accept Payments Online?</h2>
+                <p class="text-lg text-zinc-600 dark:text-zinc-300 mb-8 max-w-2xl mx-auto">
+                    Start accepting payments from customers worldwide with our secure, reliable payment gateway integration services.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/9096113197?text=Hi,%20I%20want%20to%20discuss%20Payment%20Gateway%20Integration%20for%20my%20business." class="inline-flex h-12 items-center justify-center rounded-md bg-zinc-900 px-8 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90">
+                        <span class="iconify mr-2" data-icon="mdi:whatsapp" data-width="20"></span>
+                        Chat on WhatsApp
+                    </a>
+                    <a href="tel:+919096113197" class="inline-flex h-12 items-center justify-center rounded-md border border-zinc-300 dark:border-zinc-700 px-8 text-sm font-medium shadow-sm transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800">
+                        <span class="iconify mr-2" data-icon="mdi:phone" data-width="20"></span>
+                        Call: +91 90961 13197
+                    </a>
+                </div>
+                <p class="mt-8 text-sm text-zinc-500 dark:text-zinc-400">
+                    Response time: Typically within 1 hour during business hours (10 AM - 7 PM IST)
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (same as provided) -->
+    <footer class="bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2 lg:col-span-2">
+                    <a href="https://www.vikashstudios.online" class="text-lg font-semibold tracking-tighter flex items-center gap-2 mb-4">
+                        VIKASH STUDIOS
+                    </a>
+                    <p class="text-sm text-zinc-500 dark:text-zinc-400 max-w-xs mb-6">
+                        Empowering businesses with cutting-edge software and strategic marketing solutions.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:twitter" data-width="20"></span></a>
+                        <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:github" data-width="20"></span></a>
+                        <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:instagram" data-width="20"></span></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-zinc-900 dark:text-white mb-4">Services</h4>
+                    <ul class="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">App Development</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Digital Marketing</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">UI/UX Design</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-zinc-900 dark:text-white mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+                        <li><a href="https://www.vikashstudios.online#about" class="hover:text-zinc-900 dark:hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="https://www.vikashstudios.online#founders" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Team</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#contact" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-zinc-900 dark:text-white mb-4">Legal</h4>
+                    <ul class="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-200 dark:border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-zinc-500 dark:text-zinc-500">
+                    &copy; 2023 Vikash Studios. All rights reserved.
+                </p>
+                <div class="flex items-center gap-2">
+                     <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
+                    <span class="text-xs font-medium text-zinc-500 dark:text-zinc-400">All Systems Operational</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Script -->
+    <script>
+        // --- Theme Toggle Logic ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+
+        // --- Mobile Menu Logic ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            // Toggle visibility classes
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle Icons
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIconOpen.classList.remove('hidden');
+                menuIconClose.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore scrolling
+            } else {
+                menuIconOpen.classList.add('hidden');
+                menuIconClose.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Lock scrolling
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

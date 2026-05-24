@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Website Development Services | Vikash Studios India</title>
+
+    <meta name="description" content="Vikash Studios offers professional custom website development services in India. We build responsive, SEO-friendly websites tailored to your business needs." />
+    <meta name="keywords" content="custom website development, web design India, responsive websites, e-commerce development, web development company" />
+    <link rel="canonical" href="https://www.vikashstudios.online/custom-website-development" />
+    
+    <!-- Schema Markup for Custom Web Development Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Custom Website Development",
+      "serviceType": "Web Development",
+      "provider": {
+        "@type": "Organization",
+        "name": "Vikash Studios",
+        "url": "https://www.vikashstudios.online"
+      },
+      "description": "Professional custom website development services including responsive design, e-commerce solutions, and CMS development.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Website Development Packages",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Business Website Development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "E-commerce Website Development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom Web Application"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Icons -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <style>
+        /* Custom Utilities */
+        .glass {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        body, div, nav, footer, section, h1, h2, h3, p, span, a, button {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, transform;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        /* Custom Styles */
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .section-padding {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50 font-sans antialiased selection:bg-zinc-200 dark:selection:bg-zinc-800">
+
+    <!-- Header -->
+    <nav class="fixed top-0 w-full z-50 border-b border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 glass">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between relative z-50">
+            <!-- Logo -->
+            <a href="#" class="text-lg font-semibold tracking-tighter flex items-center gap-2">
+                VIKASH STUDIOS
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                <a href="#services" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Services</a>
+                <a href="#process" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Process</a>
+                <a href="#technologies" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Technologies</a>
+                <a href="#pricing" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Pricing</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 transition-colors">
+                    <span class="iconify block dark:hidden" data-icon="lucide:sun" data-width="20" data-stroke-width="1.5"></span>
+                    <span class="iconify hidden dark:block" data-icon="lucide:moon" data-width="20" data-stroke-width="1.5"></span>
+                </button>
+                
+                <!-- Desktop CTA -->
+                <a href="https://wa.me/9096113197?text=Hii,%20I%20Wanted%20to%20make%20a%20Website%20for%20my%20business." class="hidden md:inline-flex h-9 items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 dark:focus-visible:ring-zinc-300">
+                    Get Free Quote
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 -mr-2 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-white transition-colors">
+                    <span class="iconify" id="menu-icon-open" data-icon="lucide:menu" data-width="24" data-stroke-width="1.5"></span>
+                    <span class="iconify hidden" id="menu-icon-close" data-icon="lucide:x" data-width="24" data-stroke-width="1.5"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-x-0 top-16 z-40 hidden md:hidden border-b border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl h-[calc(100vh-4rem)] overflow-y-auto transform origin-top transition-all duration-300">
+            <div class="px-6 py-8 space-y-6">
+                <nav class="flex flex-col space-y-6 text-base font-medium text-zinc-600 dark:text-zinc-400">
+                    <a href="#services" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800/50 hover:text-zinc-900 dark:hover:text-white">
+                        Services <span class="iconify opacity-50" data-icon="lucide:chevron-right" data-width="16"></span>
+                    </a>
+                    <a href="#process" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800/50 hover:text-zinc-900 dark:hover:text-white">
+                        Process <span class="iconify opacity-50" data-icon="lucide:chevron-right" data-width="16"></span>
+                    </a>
+                    <a href="#technologies" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800/50 hover:text-zinc-900 dark:hover:text-white">
+                        Technologies <span class="iconify opacity-50" data-icon="lucide:chevron-right" data-width="16"></span>
+                    </a>
+                    <a href="#pricing" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800/50 hover:text-zinc-900 dark:hover:text-white">
+                        Pricing <span class="iconify opacity-50" data-icon="lucide:chevron-right" data-width="16"></span>
+                    </a>
+                </nav>
+                
+                <div class="pt-4">
+                    <a href="https://wa.me/9096113197?text=Hii,%20I%20Wanted%20to%20make%20a%20Website%20for%20my%20business." class="mobile-link w-full flex h-11 items-center justify-center rounded-md bg-zinc-900 px-4 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90">
+                        Get Free Quote
+                    </a>
+                </div>
+
+                <div class="pt-8 mt-8 border-t border-zinc-100 dark:border-zinc-800 flex justify-center gap-8">
+                    <a href="https://www.instagram.com/vikashstudios.online" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:instagram" data-width="20"></span></a>
+                    <a href="https://github.com/vikashstudios.code" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:github" data-width="20"></span></a>
+                    <a href="https://www.linkedin.com/company/vikashstudios" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:linkedin" data-width="20"></span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-24 pb-16 md:pt-32 md:pb-20 bg-gradient-to-b from-white to-zinc-50 dark:from-zinc-950 dark:to-zinc-900">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                    <div class="lg:w-1/2 animate-fade-in">
+                        <span class="inline-block px-4 py-2 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-sm font-medium mb-6">
+                            Custom Website Development
+                        </span>
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+                            Build Your Digital Presence with
+                            <span class="gradient-text">Custom Websites</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-8 max-w-2xl">
+                            We create stunning, high-performance websites tailored to your business needs. From responsive design to seamless user experience, we build digital solutions that drive growth and engagement.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://wa.me/9096113197?text=Hii,%20I%20Wanted%20to%20make%20a%20Website%20for%20my%20business." class="inline-flex h-12 items-center justify-center rounded-md bg-zinc-900 px-6 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90">
+                                Start Your Project
+                            </a>
+                            <a href="#pricing" class="inline-flex h-12 items-center justify-center rounded-md border border-zinc-300 dark:border-zinc-700 px-6 text-sm font-medium hover:bg-zinc-50 dark:hover:bg-zinc-900">
+                                View Pricing
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 animate-slide-up">
+                        <div class="relative">
+                            <div class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur-xl opacity-20"></div>
+                            <div class="relative bg-white dark:bg-zinc-800 rounded-xl shadow-2xl p-8">
+                                <div class="flex space-x-2 mb-6">
+                                    <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="h-4 bg-zinc-200 dark:bg-zinc-700 rounded w-3/4"></div>
+                                    <div class="h-4 bg-zinc-200 dark:bg-zinc-700 rounded w-1/2"></div>
+                                    <div class="h-4 bg-zinc-200 dark:bg-zinc-700 rounded w-5/6"></div>
+                                    <div class="grid grid-cols-2 gap-4 mt-8">
+                                        <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-4 rounded-lg">
+                                            <span class="iconify inline-block text-blue-600 dark:text-blue-400 mb-2" data-icon="lucide:smartphone" data-width="24"></span>
+                                            <p class="font-medium">Mobile-First</p>
+                                        </div>
+                                        <div class="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 p-4 rounded-lg">
+                                            <span class="iconify inline-block text-purple-600 dark:text-purple-400 mb-2" data-icon="lucide:zap" data-width="24"></span>
+                                            <p class="font-medium">Fast Loading</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section-padding bg-white dark:bg-zinc-950">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Custom Website Development Services</h2>
+                    <p class="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+                        We offer a comprehensive range of website development services to meet your business requirements
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-zinc-50 dark:bg-zinc-900 p-8 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-blue-300 dark:hover:border-blue-700 transition-colors">
+                        <div class="w-12 h-12 rounded-lg bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-6">
+                            <span class="iconify text-blue-600 dark:text-blue-400" data-icon="lucide:layout" data-width="24"></span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Business Websites</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 mb-4">
+                            Professional websites for businesses to establish online presence, showcase services, and generate leads.
+                        </p>
+                        <ul class="space-y-2 text-sm text-zinc-500 dark:text-zinc-400">
+                            <li class="flex items-center gap-2"><span class="iconify" data-icon="lucide:check" data-width="16"></span> Responsive Design</li>
+                            <li class="flex items-center gap-2"><span class="iconify" data-icon="lucide:check" data-width="16"></span> SEO Optimized</li>
+                            <li class="flex items-center gap-2"><span class="iconify" data-icon="lucide:check" data-width="16"></span> Contact Forms</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Service 2 -->
+                    <div class="bg-zinc-50 dark:bg-zinc-900 p-8 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-purple-300 dark:hover:border-purple-700 transition-colors">
+                        <div class="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center mb-6">
+                            <span class="iconify text-purple-600 dark:text-purple-400" data-icon="lucide:shopping-cart" data-width="24"></span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">E-commerce Solutions</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 mb-4">
+                            Feature-rich online stores with secure payment gateways, inventory management, and customer portals.
+                        </p>
+                        <ul class="space-y-2 text-sm text-zinc-500 dark:text-zinc-400">
+                            <li class="flex items-center gap-2"><span class="iconify" data-icon="lucide:check" data-width="16"></span> Payment Integration</li>
+                            <li class="flex items-center gap-2"><span class="iconify" data-icon="lucide:check" data-width="16"></span> Product Management</li>
+                            <li class="flex items-center gap-2"><span class="iconify" data-icon="lucide:check" data-width="16"></span> Order Tracking</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Service 3 -->
+                    <div class="bg-zinc-50 dark:bg-zinc-900 p-8 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-green-300 dark:hover:border-green-700 transition-colors">
+                        <div class="w-12 h-12 rounded-lg bg-green-100 dark:bg-green-900/30 flex items-center justify-center mb-6">
+                            <span class="iconify text-green-600 dark:text-green-400" data-icon="lucide:code" data-width="24"></span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Custom Web Applications</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 mb-4">
+                            Bespoke web applications tailored to your specific business processes and workflow requirements.
+                        </p>
+                        <ul class="space-y-2 text-sm text-zinc-500 dark:text-zinc-400">
+                            <li class="flex items-center gap-2"><span class="iconify" data-icon="lucide:check" data-width="16"></span> User Authentication</li>
+                            <li class="flex items-center gap-2"><span class="iconify" data-icon="lucide:check" data-width="16"></span> Database Integration</li>
+                            <li class="flex items-center gap-2"><span class="iconify" data-icon="lucide:check" data-width="16"></span> API Development</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Additional Services -->
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gradient-to-br from-blue-50 to-white dark:from-blue-950/20 dark:to-zinc-900 p-8 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-4">CMS Development</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 mb-4">
+                            Content Management Systems that allow you to easily update your website content without technical knowledge.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 rounded-full text-sm">WordPress</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 rounded-full text-sm">Webflow</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 rounded-full text-sm">Custom CMS</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-purple-50 to-white dark:from-purple-950/20 dark:to-zinc-900 p-8 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-4">Website Maintenance</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 mb-4">
+                            Ongoing support, security updates, performance optimization, and content updates to keep your website running smoothly.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 rounded-full text-sm">Security Updates</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 rounded-full text-sm">Performance Tuning</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 rounded-full text-sm">Backup & Recovery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="section-padding bg-zinc-50 dark:bg-zinc-900">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Development Process</h2>
+                    <p class="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+                        A structured approach to ensure quality, transparency, and timely delivery
+                    </p>
+                </div>
+                
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-blue-500 to-purple-600"></div>
+                    
+                    <!-- Process Steps -->
+                    <div class="space-y-12 md:space-y-0">
+                        <!-- Step 1 -->
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                                <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-semibold mb-4">
+                                    1
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Discovery & Planning</h3>
+                                <p class="text-zinc-600 dark:text-zinc-400">
+                                    We begin by understanding your business goals, target audience, and requirements to create a detailed project plan.
+                                </p>
+                            </div>
+                            <div class="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-zinc-800 border-4 border-white dark:border-zinc-900 z-10 mx-auto">
+                                <span class="iconify text-blue-600 dark:text-blue-400" data-icon="lucide:search" data-width="20"></span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12"></div>
+                        </div>
+                        
+                        <!-- Step 2 -->
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12"></div>
+                            <div class="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-zinc-800 border-4 border-white dark:border-zinc-900 z-10 mx-auto">
+                                <span class="iconify text-purple-600 dark:text-purple-400" data-icon="lucide:palette" data-width="20"></span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 mt-6 md:mt-0">
+                                <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 font-semibold mb-4 md:hidden">
+                                    2
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Design & Prototyping</h3>
+                                <p class="text-zinc-600 dark:text-zinc-400">
+                                    Our designers create wireframes and mockups for your approval before moving to development.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3 -->
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                                <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 font-semibold mb-4">
+                                    3
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Development</h3>
+                                <p class="text-zinc-600 dark:text-zinc-400">
+                                    We build your website using modern technologies, ensuring responsive design and optimal performance.
+                                </p>
+                            </div>
+                            <div class="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-zinc-800 border-4 border-white dark:border-zinc-900 z-10 mx-auto">
+                                <span class="iconify text-green-600 dark:text-green-400" data-icon="lucide:code" data-width="20"></span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12"></div>
+                        </div>
+                        
+                        <!-- Step 4 -->
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12"></div>
+                            <div class="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-zinc-800 border-4 border-white dark:border-zinc-900 z-10 mx-auto">
+                                <span class="iconify text-yellow-600 dark:text-yellow-400" data-icon="lucide:test-tube" data-width="20"></span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 mt-6 md:mt-0">
+                                <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 font-semibold mb-4 md:hidden">
+                                    4
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Testing & Quality Assurance</h3>
+                                <p class="text-zinc-600 dark:text-zinc-400">
+                                    Rigorous testing across devices and browsers to ensure flawless performance and user experience.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 5 -->
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                                <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 font-semibold mb-4">
+                                    5
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Launch & Support</h3>
+                                <p class="text-zinc-600 dark:text-zinc-400">
+                                    We deploy your website and provide ongoing support, maintenance, and optimization services.
+                                </p>
+                            </div>
+                            <div class="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-white dark:bg-zinc-800 border-4 border-white dark:border-zinc-900 z-10 mx-auto">
+                                <span class="iconify text-red-600 dark:text-red-400" data-icon="lucide:rocket" data-width="20"></span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technologies Section -->
+        <section id="technologies" class="section-padding bg-white dark:bg-zinc-950">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Technologies We Use</h2>
+                    <p class="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+                        We leverage modern technologies and frameworks to build robust, scalable websites
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <!-- Tech 1 -->
+                    <div class="bg-zinc-50 dark:bg-zinc-900 p-6 rounded-xl flex flex-col items-center justify-center hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                            <span class="iconify text-blue-600" data-icon="vscode-icons:file-type-html" data-width="48"></span>
+                        </div>
+                        <p class="font-medium">HTML5</p>
+                    </div>
+                    
+                    <!-- Tech 2 -->
+                    <div class="bg-zinc-50 dark:bg-zinc-900 p-6 rounded-xl flex flex-col items-center justify-center hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                            <span class="iconify text-blue-400" data-icon="vscode-icons:file-type-css" data-width="48"></span>
+                        </div>
+                        <p class="font-medium">CSS3</p>
+                    </div>
+                    
+                    <!-- Tech 3 -->
+                    <div class="bg-zinc-50 dark:bg-zinc-900 p-6 rounded-xl flex flex-col items-center justify-center hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                            <span class="iconify text-yellow-500" data-icon="vscode-icons:file-type-js-official" data-width="48"></span>
+                        </div>
+                        <p class="font-medium">JavaScript</p>
+                    </div>
+                    
+                    <!-- Tech 4 -->
+                    <div class="bg-zinc-50 dark:bg-zinc-900 p-6 rounded-xl flex flex-col items-center justify-center hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                            <span class="iconify text-blue-500" data-icon="vscode-icons:file-type-reactjs" data-width="48"></span>
+                        </div>
+                        <p class="font-medium">React</p>
+                    </div>
+                    
+                    <!-- Tech 5 -->
+                    <div class="bg-zinc-50 dark:bg-zinc-900 p-6 rounded-xl flex flex-col items-center justify-center hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                            <span class="iconify text-green-500" data-icon="vscode-icons:file-type-node" data-width="48"></span>
+                        </div>
+                        <p class="font-medium">Node.js</p>
+                    </div>
+                    
+                    <!-- Tech 6 -->
+                    <div class="bg-zinc-50 dark:bg-zinc-900 p-6 rounded-xl flex flex-col items-center justify-center hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                            <span class="iconify text-blue-700" data-icon="logos:tailwindcss-icon" data-width="48"></span>
+                        </div>
+                        <p class="font-medium">Tailwind CSS</p>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <p class="text-zinc-600 dark:text-zinc-400 mb-6">
+                        And many more technologies including WordPress, MongoDB, MySQL, PHP, Python, and more
+                    </p>
+                    <a href="https://wa.me/9096113197?text=Hii,%20I%20have%20a%20question%20about%20technologies%20for%20my%20website." class="inline-flex h-12 items-center justify-center rounded-md border border-zinc-300 dark:border-zinc-700 px-6 text-sm font-medium hover:bg-zinc-50 dark:hover:bg-zinc-900">
+                        Discuss Technology Stack
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="section-padding bg-zinc-50 dark:bg-zinc-900">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Flexible Pricing Plans</h2>
+                    <p class="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+                        Choose a plan that fits your budget and requirements. All plans include responsive design and basic SEO.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Basic Plan -->
+                    <div class="bg-white dark:bg-zinc-800 p-8 rounded-2xl border border-zinc-200 dark:border-zinc-700">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold mb-2">Basic Website</h3>
+                            <p class="text-zinc-600 dark:text-zinc-400 text-sm">Perfect for small businesses & startups</p>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex items-baseline">
+                                <span class="text-4xl font-bold">₹5,999</span>
+                                <span class="text-zinc-500 ml-2">one-time</span>
+                            </div>
+                            <p class="text-zinc-500 dark:text-zinc-400 text-sm mt-2">Delivered in 10-15 days</p>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2"><span class="iconify text-green-500" data-icon="lucide:check" data-width="16"></span> Up to 5 Pages</li>
+                            <li class="flex items-center gap-2"><span class="iconify text-green-500" data-icon="lucide:check" data-width="16"></span> Responsive Design</li>
+                            <li class="flex items-center gap-2"><span class="iconify text-green-500" data-icon="lucide:check" data-width="16"></span> Contact Form</li>
+                            <li class="flex items-center gap-2"><span class="iconify text-green-500" data-icon="lucide:check" data-width="16"></span> Basic SEO Setup</li>
+                            <li class="flex items-center gap-2"><span class="iconify text-green-500" data-icon="lucide:check" data-width="16"></span> 1 Month Support</li>
+                        </ul>
+                        <a href="https://wa.me/9096113197?text=Hii,%20I%20am%20interested%20in%20Basic%20Website%20Plan" class="w-full inline-flex h-12 items-center justify-center rounded-md border border-zinc-300 dark:border-zinc-700 text-sm font-medium hover:bg-zinc-50 dark:hover:bg-zinc-900">
+                            Get Basic Plan
+                        </a>
+                    </div>
+                    
+                    <!-- Professional Plan -->
+                    <div class="bg-white dark:bg-zinc-800 p-8 rounded-2xl border-2 border-blue-500 relative shadow-lg">
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                            <span class="px-4 py-1 bg-blue-500 text-white text-sm font-medium rounded-full">Most Popular</span>
+                        </div>
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold mb-2">Business Website</h3>
+                            <p class="text-zinc-600 dark:text-zinc-400 text-sm">Ideal for growing businesses</p>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex items-baseline">
+                                <span class="text-4xl font-bold">₹10,999</span>
+                                <span class="text-zinc-500 ml-2">one-time</span>
+                            </div>
+                            <p class="text-zinc-500 dark:text-zinc-400 text-sm mt-2">Delivered in 15-25 days</p>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2"><span class="iconify text-green-500" data-icon="lucide:check" data-width="16"></span> Up to 10 Pages</li>
+                            <li class="flex items-center gap-2"><span class="iconify text-green-500" data-icon="lucide:check" data-width="16"></span> Custom Design</li>
+                            <li class="flex items-center gap-2"><span class="iconify text-green-500" data-icon="lucide:check" data-width="16"></span> CMS Integration</li>
+                            <li class="flex items-center gap-2"><span class="iconify text-green-500" data-icon="lucide:check" data-width="16"></span> Advanced SEO</li>
+                            <li class="flex items-center gap-2"><span class="iconify text-green-500" data-icon="lucide:check" data-width="16"></span> 3 Months Support</li>
+                            <li class="flex items-center gap-2"><span class="iconify text-green-500" data-icon="lucide:check" data-width="16"></span> Google Analytics</li>
+                        </ul>
+                        <a href="https://wa.me/9096113197?text=Hii,%20I%20am%20interested%20in%20Business%20Website%20Plan" class="w-full inline-flex h-12 items-center justify-center rounded-md bg-blue-600 px-6 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700">
+                            Get Business Plan
+                        </a>
+                    </div>
+                    
+                    <!-- E-commerce Plan -->
+                    <div class="bg-white dark:bg-zinc-800 p-8 rounded-2xl border border-zinc-200 dark:border-zinc-700">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold mb-2">E-commerce Website</h3>
+                            <p class="text-zinc-600 dark:text-zinc-400 text-sm">Complete online store solution</p>
+                        </div>
+                        <div class="mb-6">
+                            <div class="flex items-baseline">
+                                <span class="text-4xl font-bold">₹15,999</span>
+                                <span class="text-zinc-500 ml-2">one-time</span>
+                            </div>
+                            <p class="text-zinc-500 dark:text-zinc-400 text-sm mt-2">Delivered in 25-40 days</p>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-2"><span class="iconify text-green-500" data-icon="lucide:check" data-width="16"></span> Product Management</li>
+                            <li class="flex items-center gap-2"><span class="iconify text-green-500" data-icon="lucide:check" data-width="16"></span> Payment Gateway</li>
+                            <li class="flex items-center gap-2"><span class="iconify text-green-500" data-icon="lucide:check" data-width="16"></span> User Accounts</li>
+                            <li class="flex items-center gap-2"><span class="iconify text-green-500" data-icon="lucide:check" data-width="16"></span> Order Tracking</li>
+                            <li class="flex items-center gap-2"><span class="iconify text-green-500" data-icon="lucide:check" data-width="16"></span> 6 Months Support</li>
+                            <li class="flex items-center gap-2"><span class="iconify text-green-500" data-icon="lucide:check" data-width="16"></span> Admin Dashboard</li>
+                        </ul>
+                        <a href="https://wa.me/9096113197?text=Hii,%20I%20am%20interested%20in%20E-commerce%20Website%20Plan" class="w-full inline-flex h-12 items-center justify-center rounded-md border border-zinc-300 dark:border-zinc-700 text-sm font-medium hover:bg-zinc-50 dark:hover:bg-zinc-900">
+                            Get E-commerce Plan
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <p class="text-zinc-600 dark:text-zinc-400 mb-6">
+                        Need a custom solution? Contact us for a personalized quote based on your specific requirements.
+                    </p>
+                    <a href="https://wa.me/9096113197?text=Hii,%20I%20need%20a%20custom%20quote%20for%20my%20website%20project." class="inline-flex h-12 items-center justify-center rounded-md bg-zinc-900 px-6 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90">
+                        Get Custom Quote
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Build Your Dream Website?</h2>
+                <p class="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+                    Let's discuss your project and create a website that reflects your brand identity and achieves your business goals.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/9096113197?text=Hii,%20I%20Wanted%20to%20make%20a%20Website%20for%20my%20business." class="inline-flex h-12 items-center justify-center rounded-md bg-white px-6 text-sm font-medium text-blue-600 shadow transition-colors hover:bg-blue-50">
+                        <span class="iconify mr-2" data-icon="logos:whatsapp-icon" data-width="20"></span>
+                        Chat on WhatsApp
+                    </a>
+                    <a href="tel:+919096113197" class="inline-flex h-12 items-center justify-center rounded-md border border-white/30 px-6 text-sm font-medium hover:bg-white/10">
+                        <span class="iconify mr-2" data-icon="lucide:phone" data-width="20"></span>
+                        Call: +91 9096113197
+                    </a>
+                </div>
+                <p class="mt-8 text-blue-100 text-sm">
+                    Response within 2 hours during business hours (Mon-Sat, 10AM-7PM IST)
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2 lg:col-span-2">
+                    <a href="#" class="text-lg font-semibold tracking-tighter flex items-center gap-2 mb-4">
+                        VIKASH STUDIOS
+                    </a>
+                    <p class="text-sm text-zinc-500 dark:text-zinc-400 max-w-xs mb-6">
+                        Empowering businesses with cutting-edge software and strategic marketing solutions.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/vikashstudios.online" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:instagram" data-width="20"></span></a>
+                        <a href="https://github.com/vikashstudios.code" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:github" data-width="20"></span></a>
+                        <a href="https://www.linkedin.com/company/vikashstudios" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:linkedin" data-width="20"></span></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-zinc-900 dark:text-white mb-4">Services</h4>
+                    <ul class="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">App Development</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Digital Marketing</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">UI/UX Design</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-zinc-900 dark:text-white mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+                        <li><a href="#about" class="hover:text-zinc-900 dark:hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#founders" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Team</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#contact" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-zinc-900 dark:text-white mb-4">Legal</h4>
+                    <ul class="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-200 dark:border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-zinc-500 dark:text-zinc-500">
+                    &copy; 2023 Vikash Studios. All rights reserved.
+                </p>
+                <div class="flex items-center gap-2">
+                     <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
+                    <span class="text-xs font-medium text-zinc-500 dark:text-zinc-400">All Systems Operational</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Script -->
+    <script>
+        // --- Theme Toggle Logic ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+
+        // --- Mobile Menu Logic ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            // Toggle visibility classes
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle Icons
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIconOpen.classList.remove('hidden');
+                menuIconClose.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore scrolling
+            } else {
+                menuIconOpen.classList.add('hidden');
+                menuIconClose.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Lock scrolling
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

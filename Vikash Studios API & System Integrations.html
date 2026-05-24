@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikash Studios | Web Development & IT Solutions Company in India</title>
+
+    <meta name="description" content="Vikash Studios is a professional web development and IT solutions agency offering websites, e-commerce, automation, mobile apps, and digital marketing across India." />
+    <link rel="canonical" href="https://www.vikashstudios.online/" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Vikash Studios",
+  "url": "https://www.vikashstudios.online",
+  "logo": "https://www.vikashstudios.com/Vikash Studios Logo.png",
+  "sameAs": [
+    "https://www.instagram.com/vikashstudios.online",
+    "https://www.linkedin.com/company/vikashstudios",
+    "https://github.com/vikashstudios.code"
+  ],
+  "description": "Vikash Studios is a web development and IT solutions company providing websites, e-commerce, automation, mobile apps and digital marketing services.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN"
+  }
+}
+</script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Icons -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <style>
+        /* Custom Utilities */
+        .glass {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        body, div, nav, footer, section, h1, h2, h3, p, span, a, button {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, transform;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3JMWR5RL09"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3JMWR5RL09');
+</script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17869248826"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17869248826');
+</script>
+<body class="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50 font-sans antialiased selection:bg-zinc-200 dark:selection:bg-zinc-800">
+
+    <!-- Header -->
+    <nav class="fixed top-0 w-full z-50 border-b border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 glass">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between relative z-50">
+            <!-- Logo -->
+            <a href="#" class="text-lg font-semibold tracking-tighter flex items-center gap-2">
+                VIKASH STUDIOS
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                <a href="#services" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Services</a>
+                <a href="#projects" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="#about" class="hover:text-zinc-900 dark:hover:text-white transition-colors">About</a>
+                <a href="#founders" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Team</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 transition-colors">
+                    <span class="iconify block dark:hidden" data-icon="lucide:sun" data-width="20" data-stroke-width="1.5"></span>
+                    <span class="iconify hidden dark:block" data-icon="lucide:moon" data-width="20" data-stroke-width="1.5"></span>
+                </button>
+                
+                <!-- Desktop CTA -->
+                <a href="https://wa.me/9096113197?text=Hii,%20I%20Wanted%20to%20make%20a%20Website%20for%20my%20business." class="hidden md:inline-flex h-9 items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 dark:focus-visible:ring-zinc-300">
+                    Contact Us
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 -mr-2 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-white transition-colors">
+                    <span class="iconify" id="menu-icon-open" data-icon="lucide:menu" data-width="24" data-stroke-width="1.5"></span>
+                    <span class="iconify hidden" id="menu-icon-close" data-icon="lucide:x" data-width="24" data-stroke-width="1.5"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-x-0 top-16 z-40 hidden md:hidden border-b border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl h-[calc(100vh-4rem)] overflow-y-auto transform origin-top transition-all duration-300">
+            <div class="px-6 py-8 space-y-6">
+                <nav class="flex flex-col space-y-6 text-base font-medium text-zinc-600 dark:text-zinc-400">
+                    <a href="#services" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800/50 hover:text-zinc-900 dark:hover:text-white">
+                        Services <span class="iconify opacity-50" data-icon="lucide:chevron-right" data-width="16"></span>
+                    </a>
+                    <a href="#projects" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800/50 hover:text-zinc-900 dark:hover:text-white">
+                        Projects <span class="iconify opacity-50" data-icon="lucide:chevron-right" data-width="16"></span>
+                    </a>
+                    <a href="#about" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800/50 hover:text-zinc-900 dark:hover:text-white">
+                        About <span class="iconify opacity-50" data-icon="lucide:chevron-right" data-width="16"></span>
+                    </a>
+                    <a href="#founders" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800/50 hover:text-zinc-900 dark:hover:text-white">
+                        Team <span class="iconify opacity-50" data-icon="lucide:chevron-right" data-width="16"></span>
+                    </a>
+                </nav>
+                
+                <div class="pt-4">
+                    <a href="https://wa.me/9096113197?text=Hii,%20I%20Wanted%20to%20make%20a%20Website%20for%20my%20business." class="mobile-link w-full flex h-11 items-center justify-center rounded-md bg-zinc-900 px-4 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90">
+                        Contact Us
+                    </a>
+                </div>
+
+                <div class="pt-8 mt-8 border-t border-zinc-100 dark:border-zinc-800 flex justify-center gap-8">
+                    <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:twitter" data-width="20"></span></a>
+                    <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:github" data-width="20"></span></a>
+                    <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:linkedin" data-width="20"></span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden" >
+         <!-- Background Image -->
+    <div class="absolute inset-0 -z-20">
+        <img 
+            src="Images/a43c181c-0821-49ce-b2ca-0d1706db5581.gif"
+            alt="Digital agency background"
+            class="h-full w-full object-cover object-center"
+        />
+    </div>
+     <!-- Overlay for readability (light + dark aware) -->
+    <div class="absolute inset-0 -z-10 bg-white/80 dark:bg-zinc-950/85"></div>
+
+    <!-- Grid Pattern -->
+    <div class="absolute inset-0 -z-10 h-full w-full
+        bg-[radial-gradient(#e5e7eb_1px,transparent_1px)]
+        dark:bg-[radial-gradient(#27272a_1px,transparent_1px)]
+        [background-size:16px_16px]
+        [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]
+    ">
+    </div>
+        <div class="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-zinc-950 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#27272a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs font-medium text-zinc-800 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-200 mb-6">
+                <span class="flex h-2 w-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
+                Accepting new projects
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-zinc-900 dark:text-white mb-6">
+                We build digital <br class="hidden md:block" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-zinc-900 to-zinc-500 dark:from-white dark:to-zinc-500">experiences that scale.</span>
+            </h1>
+            
+            <p class="mt-4 text-lg md:text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Vikash Studios is a premier IT solutions agency specializing in high-performance web development and data-driven digital marketing strategies.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/9096113197?text=Hii,%20I%20Wanted%20to%20make%20a%20Website%20for%20my%20business." class="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-md bg-zinc-900 px-8 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 dark:focus-visible:ring-zinc-300">
+                    Start a Project
+                </a>
+                <a href="#projects" class="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-md border border-zinc-200 bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:border-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-800 dark:focus-visible:ring-zinc-300">
+                    View Our Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="py-12 border-y border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/20">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-center text-sm font-medium text-zinc-500 dark:text-zinc-500 mb-8 uppercase tracking-widest">Trusted by industry leaders</p>
+            <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 opacity-75 grayscale dark:invert">
+                <div class="flex items-center gap-2 text-xl font-bold tracking-tighter text-zinc-800">
+                    <span class="iconify" data-icon="lucide:globe" data-width="24"></span> PrepPlus.co.uk
+                </div>
+                <div class="flex items-center gap-2 text-xl font-bold tracking-tighter text-zinc-800">
+                    <span class="iconify" data-icon="lucide:globe" data-width="24"></span> DigiBrandz.in
+                </div>
+                <div class="flex items-center gap-2 text-xl font-bold tracking-tighter text-zinc-800">
+                    <span class="iconify" data-icon="lucide:globe" data-width="24"></span> Ioct.in
+                </div>
+                <div class="flex items-center gap-2 text-xl font-bold tracking-tighter text-zinc-800">
+                    <span class="iconify" data-icon="lucide:globe" data-width="24"></span> Datnex.online
+                </div>
+                <div class="flex items-center gap-2 text-xl font-bold tracking-tighter text-zinc-800">
+                    <span class="iconify" data-icon="lucide:globe" data-width="24"></span> TargetConnect.in
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white dark:bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <h2 class="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-white sm:text-4xl">Our Expertise</h2>
+                <p class="mt-4 text-zinc-600 dark:text-zinc-400 max-w-2xl text-lg">Comprehensive solutions tailored to accelerate your business growth in the digital landscape.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <a href="Vikash Studios Custom WebSite Developement.html">
+                    <div class="group p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 hover:bg-white dark:hover:bg-zinc-900 hover:shadow-xl hover:shadow-zinc-200/50 dark:hover:shadow-zinc-900/50 transition-all duration-300">
+                        <div class="w-12 h-12 bg-zinc-900 dark:bg-white rounded-lg flex items-center justify-center mb-6 text-white dark:text-zinc-900">
+                            <span class="iconify" data-icon="lucide:code-2" data-width="24" data-stroke-width="1.5"></span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-zinc-900 dark:text-white mb-3">Custom Website Development</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">
+                            We build fast, responsive, and SEO-friendly websites for businesses of all sizes.
+                            From basic business sites to corporate and e-commerce platforms.
+                            Designed to generate leads and grow your online presence.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Service 2 -->
+                <div class="group p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 hover:bg-white dark:hover:bg-zinc-900 hover:shadow-xl hover:shadow-zinc-200/50 dark:hover:shadow-zinc-900/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-zinc-900 dark:bg-white rounded-lg flex items-center justify-center mb-6 text-white dark:text-zinc-900">
+                        <span class="iconify" data-icon="lucide:bar-chart-3" data-width="24" data-stroke-width="1.5"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-zinc-900 dark:text-white mb-3">Mobile App Development</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">
+                        Custom Android and iOS apps with smooth performance and modern UI.
+                        From basic apps to advanced, feature-rich mobile solutions.
+                        Built for scalability, security, and user engagement.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 hover:bg-white dark:hover:bg-zinc-900 hover:shadow-xl hover:shadow-zinc-200/50 dark:hover:shadow-zinc-900/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-zinc-900 dark:bg-white rounded-lg flex items-center justify-center mb-6 text-white dark:text-zinc-900">
+                        <span class="iconify" data-icon="lucide:smartphone" data-width="24" data-stroke-width="1.5"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-zinc-900 dark:text-white mb-3">Automation Solutions</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">
+                      Automate WhatsApp, email, and business workflows to save time.
+                        Improve efficiency, reduce manual work, and increase productivity.
+                        Custom automation tailored to your business processes.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="group p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 hover:bg-white dark:hover:bg-zinc-900 hover:shadow-xl hover:shadow-zinc-200/50 dark:hover:shadow-zinc-900/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-zinc-900 dark:bg-white rounded-lg flex items-center justify-center mb-6 text-white dark:text-zinc-900">
+                        <span class="iconify" data-icon="lucide:shopping-bag" data-width="24" data-stroke-width="1.5"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-zinc-900 dark:text-white mb-3">Payment Gateway Integration</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">
+                       Secure payment gateway integration for websites and mobile apps.
+                        Supports Razorpay, Paytm, Cashfree, and recurring payments.
+                        Fast, reliable, and compliant transaction systems.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="group p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 hover:bg-white dark:hover:bg-zinc-900 hover:shadow-xl hover:shadow-zinc-200/50 dark:hover:shadow-zinc-900/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-zinc-900 dark:bg-white rounded-lg flex items-center justify-center mb-6 text-white dark:text-zinc-900">
+                        <span class="iconify" data-icon="lucide:cloud" data-width="24" data-stroke-width="1.5"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-zinc-900 dark:text-white mb-3">Authentication & Security</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">
+                        Secure login systems with social login and OTP authentication.
+                        Protect user data with modern security standards.
+                        Reliable and scalable authentication solutions.
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="group p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 hover:bg-white dark:hover:bg-zinc-900 hover:shadow-xl hover:shadow-zinc-200/50 dark:hover:shadow-zinc-900/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-zinc-900 dark:bg-white rounded-lg flex items-center justify-center mb-6 text-white dark:text-zinc-900">
+                        <span class="iconify" data-icon="lucide:shield-check" data-width="24" data-stroke-width="1.5"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-zinc-900 dark:text-white mb-3">Business Software Solutions</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">
+                        Custom billing, inventory, ERP, and CRM software development.
+                        Streamline operations and manage business data efficiently.
+                        Scalable solutions built for long-term growth.
+                    </p>
+                </div>
+                <div class="group p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 hover:bg-white dark:hover:bg-zinc-900 hover:shadow-xl hover:shadow-zinc-200/50 dark:hover:shadow-zinc-900/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-zinc-900 dark:bg-white rounded-lg flex items-center justify-center mb-6 text-white dark:text-zinc-900">
+                        <span class="iconify" data-icon="lucide:shield-check" data-width="24" data-stroke-width="1.5"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-zinc-900 dark:text-white mb-3">API & System Integrations</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">
+                        Seamless third-party API and system integrations.
+                        SMS, email, and WhatsApp API connectivity.
+                        Ensures smooth data flow across platforms.
+                    </p>
+                </div>
+                <div class="group p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 hover:bg-white dark:hover:bg-zinc-900 hover:shadow-xl hover:shadow-zinc-200/50 dark:hover:shadow-zinc-900/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-zinc-900 dark:bg-white rounded-lg flex items-center justify-center mb-6 text-white dark:text-zinc-900">
+                        <span class="iconify" data-icon="lucide:shield-check" data-width="24" data-stroke-width="1.5"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-zinc-900 dark:text-white mb-3">Cloud & Hosting Services</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">
+                       Domain, hosting, and cloud server setup services.
+                        Optimized for performance, security, and uptime.
+                        Scalable cloud solutions for growing businesses.
+                    </p>
+                </div>
+                <div class="group p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 hover:bg-white dark:hover:bg-zinc-900 hover:shadow-xl hover:shadow-zinc-200/50 dark:hover:shadow-zinc-900/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-zinc-900 dark:bg-white rounded-lg flex items-center justify-center mb-6 text-white dark:text-zinc-900">
+                        <span class="iconify" data-icon="lucide:shield-check" data-width="24" data-stroke-width="1.5"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-zinc-900 dark:text-white mb-3">Support & Maintenance</h3>
+                    <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed text-sm">
+                      Ongoing website and app maintenance services.
+                        Bug fixing, updates, and performance optimization.
+                        Ensuring smooth, secure, and reliable systems.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-zinc-50 dark:bg-zinc-900 border-y border-zinc-200 dark:border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+                <div>
+                    <h2 class="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-white sm:text-4xl">Selected Work</h2>
+                    <p class="mt-4 text-zinc-600 dark:text-zinc-400 max-w-xl text-lg">A showcase of projects where technology meets design to solve real-world problems.</p>
+                </div>
+                <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-zinc-900 dark:text-white hover:underline underline-offset-4">
+                    View all projects <span class="iconify" data-icon="lucide:arrow-right" data-width="16"></span>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
+                    <div class="aspect-[16/9] w-full bg-zinc-100 dark:bg-zinc-900 overflow-hidden">
+                        <img src="Images/Portfolio.png" alt="Project 1" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Portfolio</span>
+                            <a href="https://www.vikashsingh.fun/">
+                                <span class="iconify text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" data-icon="lucide:arrow-up-right" data-width="20"></span>
+                            </a>
+                        </div>
+                        <h3 class="text-xl font-semibold text-zinc-900 dark:text-white mb-2">Vikash Singh – Web Developer & Digital Solutions Expert</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 text-sm">
+                            Personal portfolio showcasing web development, automation, and digital services.
+                            Modern, fast-loading, and mobile-friendly design.
+                            Optimized to build personal branding and generate client leads.
+                        </p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
+                    <div class="aspect-[16/9] w-full bg-zinc-100 dark:bg-zinc-900 overflow-hidden">
+                        <img src="Images/rang.png" alt="Project 1" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">E-Commerce Website</span>
+                            <a href="https://rangfusion.com/">
+                                <span class="iconify text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" data-icon="lucide:arrow-up-right" data-width="20"></span>
+                            </a>
+                        </div>
+                        <h3 class="text-xl font-semibold text-zinc-900 dark:text-white mb-2">RangFusion – Premium Fashion & Lifestyle Store</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 text-sm">
+                            E-commerce website for trendy fashion and lifestyle products.
+                            Smooth shopping experience with secure checkout.
+                            Designed to boost product visibility and online sales.
+                        </p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
+                    <div class="aspect-[16/9] w-full bg-zinc-100 dark:bg-zinc-900 overflow-hidden">
+                        <img src="Images/shri.png" alt="Project 1" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">E-Commerce Website</span>
+                            <a href="https://shrisamarthakrupamilkproducts.com/">
+                                <span class="iconify text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" data-icon="lucide:arrow-up-right" data-width="20"></span>
+                            </a>
+                        </div>
+                        <h3 class="text-xl font-semibold text-zinc-900 dark:text-white mb-2">Shri Samarth Krupa Milk Products – Pure Dairy Products Online</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 text-sm">
+                            Online dairy store for ghee and milk-based products.
+                            Simple product browsing with trust-focused design.
+                            Optimized for local and organic food buyers.
+                        </p>
+                    </div>
+                </div>
+                
+
+                <!-- Project 2 -->
+                <div class="group relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
+                    <div class="aspect-[16/9] w-full bg-zinc-100 dark:bg-zinc-900 overflow-hidden">
+                        <img src="Images/prepplus.png" alt="Project 2" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Learn Management System</span>
+                            <a href="https://prepplus.co.uk/">
+                                <span class="iconify text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" data-icon="lucide:arrow-up-right" data-width="20"></span>
+                            </a>
+                        </div>
+                        <h3 class="text-xl font-semibold text-zinc-900 dark:text-white mb-2">PrepPlus.co.uk - An Education Website for Uk based Audience.</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 text-sm">A clean business website for digital and creative services.
+                            Responsive design with smooth user experience.
+                            Built for strong online presence and brand credibility, for Students and teachers.</p>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="group relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
+                    <div class="aspect-[16/9] w-full bg-zinc-100 dark:bg-zinc-900 overflow-hidden">
+                        <img src="Images/shreyog.png" alt="Project 3" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">Business Landing Page </span>
+                            <a href="https://shreeyogchikitsa.com/">
+                                <span class="iconify text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" data-icon="lucide:arrow-up-right" data-width="20"></span>
+                            </a>
+                        </div>
+                        <h3 class="text-xl font-semibold text-zinc-900 dark:text-white mb-2">Shree Yog Chikitsa – Holistic Health & Wellness Center</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 text-sm">Informative website for yoga therapy and natural healing services.
+                            Simple navigation with service-focused content.
+                            Designed to attract local and health-conscious audiences.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="group relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
+                    <div class="aspect-[16/9] w-full bg-zinc-100 dark:bg-zinc-900 overflow-hidden">
+                        <img src="Images/Datnex.png" alt="Project 4" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <a href="https://datnex.online/">
+                                <span class="text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400">SAAS</span>
+                            </a>
+                            <span class="iconify text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors" data-icon="lucide:arrow-up-right" data-width="20"></span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-zinc-900 dark:text-white mb-2">Datnex – Smart Digital & Technology Solutions</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 text-sm">Professional business website for tech and digital services.
+                            SEO-friendly structure with fast performance.
+                            Built to establish trust and online authority.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <style>
+        /* Theme Variables */
+:root {
+  --bg: #ffffff;
+  --card-bg: #f8f9fb;
+  --border: #e6e6e6;
+  --heading: #111;
+  --text: #555;
+  --muted: #777;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f0f0f;
+    --card-bg: #161616;
+    --border: #262626;
+    --heading: #ffffff;
+    --text: #cfcfcf;
+    --muted: #9a9a9a;
+  }
+}
+
+.founders {
+  background: var(--bg);
+  padding: 6rem 1.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+
+  h2 {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    color: var(--heading);
+  }
+
+  p {
+    margin-top: 0.8rem;
+    color: var(--muted);
+    font-size: 1.05rem;
+  }
+}
+
+/* Founder Cards */
+.founder-card {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  align-items: center;
+
+  &.right-image {
+    grid-template-columns: 1.3fr 1fr;
+  }
+
+  .image img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 18px;
+  }
+
+  .content {
+    h3 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--heading);
+    }
+
+    span {
+      display: block;
+      margin: 0.4rem 0 1.2rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    p {
+      color: var(--text);
+      line-height: 1.7;
+      max-width: 520px;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .founder-card,
+  .founder-card.right-image {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .social-links {
+    justify-content: space-between;
+  }
+
+  .founder-card .image img {
+    height: 260px;
+  }
+}
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  
+
+  a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    display: grid;
+    place-items: center;
+    transition: all 0.3s ease;
+    background: transparent;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--muted);
+      transition: fill 0.3s ease;
+    }
+
+    &:hover {
+      border-color: var(--heading);
+      transform: translateY(-2px);
+
+      svg {
+        fill: var(--heading);
+      }
+    }
+  }
+}
+
+
+    </style>
+
+
+    <section id="founders" class="founders">
+  <div class="container">
+
+    <div class="section-header">
+      <h2>Meet the Founders</h2>
+      <p>The technical minds behind Vikash Studios</p>
+    </div>
+
+    <!-- Card 1 -->
+    <div class="founder-card left-image">
+      <div class="image">
+        <img src="Images/vikash.jpeg" alt="Vikash Singh">
+      </div>
+      <div class="content">
+        <h3>Vikash B Singh</h3>
+        <span>Founder & Lead Software Engineer</span>
+        <p>
+          Full-stack developer with 10+ years of experience in building scalable
+          web applications, automation systems, APIs, and secure architectures
+          for businesses.
+        </p>
+        <div class="social-links">
+          <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM8 8h3.8v2.2h.1c.5-1 1.8-2.2 3.8-2.2 4.1 0 4.9 2.7 4.9 6.2V24h-4v-7.8c0-1.9 0-4.3-2.6-4.3-2.6 0-3 2-3 4.2V24H8z"/></svg>
+          </a>
+          <a href="https://github.com/" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.74.5 12.04c0 5.1 3.29 9.42 7.86 10.95.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.53-1.36-1.3-1.72-1.3-1.72-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.41-1.27.75-1.56-2.55-.3-5.24-1.28-5.24-5.68 0-1.26.45-2.3 1.2-3.11-.12-.3-.52-1.5.12-3.13 0 0 .97-.31 3.18 1.19a11 11 0 0 1 5.8 0c2.21-1.5 3.18-1.19 3.18-1.19.64 1.63.24 2.83.12 3.13.75.81 1.2 1.85 1.2 3.11 0 4.41-2.7 5.37-5.27 5.66.42.36.8 1.07.8 2.16v3.2c0 .31.21.67.8.56A11.55 11.55 0 0 0 23.5 12C23.5 5.74 18.27.5 12 .5z"/></svg>
+          </a>
+          <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+            <svg viewBox="0 0 24 24"><path d="M24 4.56c-.88.39-1.83.65-2.82.77a4.93 4.93 0 0 0 2.16-2.72 9.9 9.9 0 0 1-3.13 1.2 4.92 4.92 0 0 0-8.38 4.48A13.97 13.97 0 0 1 1.67 3.15a4.92 4.92 0 0 0 1.52 6.57 4.9 4.9 0 0 1-2.23-.62v.06a4.92 4.92 0 0 0 3.95 4.82 4.93 4.93 0 0 1-2.22.08 4.92 4.92 0 0 0 4.6 3.42A9.86 9.86 0 0 1 0 19.54a13.93 13.93 0 0 0 7.55 2.21c9.06 0 14.01-7.5 14.01-14 0-.21 0-.42-.02-.63A10 10 0 0 0 24 4.56z"/></svg>
+          </a>
+          <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+
+              <!-- Instagram Icon -->
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6zm0 2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6zm4.9-.8a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0z"/>
+                </svg>
+            </a>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="founder-card right-image">
+      <div class="content">
+        <h3>Richa R Gupta</h3>
+        <span>Co-Founder & Marketing Technologist</span>
+        <p>
+          Developer-marketer hybrid focused on growth systems, analytics,
+          automation workflows, and conversion-driven digital platforms.
+        </p>
+        <div class="social-links">
+          <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM8 8h3.8v2.2h.1c.5-1 1.8-2.2 3.8-2.2 4.1 0 4.9 2.7 4.9 6.2V24h-4v-7.8c0-1.9 0-4.3-2.6-4.3-2.6 0-3 2-3 4.2V24H8z"/></svg>
+          </a>
+          <a href="https://github.com/" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.73.5.5 5.74.5 12.04c0 5.1 3.29 9.42 7.86 10.95.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.53-1.36-1.3-1.72-1.3-1.72-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.41-1.27.75-1.56-2.55-.3-5.24-1.28-5.24-5.68 0-1.26.45-2.3 1.2-3.11-.12-.3-.52-1.5.12-3.13 0 0 .97-.31 3.18 1.19a11 11 0 0 1 5.8 0c2.21-1.5 3.18-1.19 3.18-1.19.64 1.63.24 2.83.12 3.13.75.81 1.2 1.85 1.2 3.11 0 4.41-2.7 5.37-5.27 5.66.42.36.8 1.07.8 2.16v3.2c0 .31.21.67.8.56A11.55 11.55 0 0 0 23.5 12C23.5 5.74 18.27.5 12 .5z"/></svg>
+          </a>
+          <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+            <svg viewBox="0 0 24 24"><path d="M24 4.56c-.88.39-1.83.65-2.82.77a4.93 4.93 0 0 0 2.16-2.72 9.9 9.9 0 0 1-3.13 1.2 4.92 4.92 0 0 0-8.38 4.48A13.97 13.97 0 0 1 1.67 3.15a4.92 4.92 0 0 0 1.52 6.57 4.9 4.9 0 0 1-2.23-.62v.06a4.92 4.92 0 0 0 3.95 4.82 4.93 4.93 0 0 1-2.22.08 4.92 4.92 0 0 0 4.6 3.42A9.86 9.86 0 0 1 0 19.54a13.93 13.93 0 0 0 7.55 2.21c9.06 0 14.01-7.5 14.01-14 0-.21 0-.42-.02-.63A10 10 0 0 0 24 4.56z"/></svg>
+          </a>
+          <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+
+              <!-- Instagram Icon -->
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6zm0 2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6zm4.9-.8a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0z"/>
+                </svg>
+            </a>
+        </div>
+      </div>
+      <div class="image">
+        <img src="Images/Richa.jpeg" alt="Richa R Gupta">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- About Section Content -->
+    <section id="about" class="py-12 bg-white dark:bg-zinc-950">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <span class="inline-block p-2 rounded-lg bg-zinc-100 dark:bg-zinc-900 mb-4">
+                <span class="iconify text-zinc-500" data-icon="lucide:info" data-width="20"></span>
+            </span>
+            <h3 class="text-2xl font-semibold text-zinc-900 dark:text-white mb-4">Why Vikash Studios?</h3>
+            <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                We believe in transparency, speed, and quality. Our team works remotely from around the globe to bring you 24/7 support and rapid development cycles. Whether you are a startup needing an MVP or an enterprise scaling up, we integrate seamlessly with your vision.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-white sm:text-4xl">Let's build something <br>great together.</h2>
+                    <p class="mt-4 text-zinc-600 dark:text-zinc-400 text-lg mb-8">
+                        Have a project in mind? Fill out the form or reach out directly. We'd love to hear from you.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="p-2 rounded-md bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 shadow-sm text-zinc-900 dark:text-white">
+                                <span class="iconify" data-icon="lucide:mail" data-width="20"></span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-zinc-900 dark:text-white">Email</h4>
+                                <a href="mailto:hello@vikashstudios.com" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white text-sm">vikashsinghpro95@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="p-2 rounded-md bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 shadow-sm text-zinc-900 dark:text-white">
+                                <span class="iconify" data-icon="lucide:map-pin" data-width="20"></span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-zinc-900 dark:text-white">Office</h4>
+                                <p class="text-zinc-600 dark:text-zinc-400 text-sm">Techno Park, Sector 5<br>Bangalore, India</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="p-2 rounded-md bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 shadow-sm text-zinc-900 dark:text-white">
+                                <span class="iconify" data-icon="lucide:phone" data-width="20"></span>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-zinc-900 dark:text-white">Phone</h4>
+                                <p class="text-zinc-600 dark:text-zinc-400 text-sm">+91 9082585015</p>
+                                <p class="text-zinc-600 dark:text-zinc-400 text-sm">+91 9096113197</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-8 shadow-sm">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="space-y-2">
+                            <label for="name" class="text-sm font-medium text-zinc-900 dark:text-zinc-200">Name</label>
+                            <input type="text" id="name" class="flex h-10 w-full rounded-md border border-zinc-200 bg-transparent px-3 py-2 text-sm placeholder:text-zinc-400 focus:outline-none focus:ring-1 focus:ring-zinc-900 dark:border-zinc-800 dark:focus:ring-zinc-300 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Vikash Singh">
+                        </div>
+                        <div class="space-y-2">
+                            <label for="email" class="text-sm font-medium text-zinc-900 dark:text-zinc-200">Email</label>
+                            <input type="email" id="email" class="flex h-10 w-full rounded-md border border-zinc-200 bg-transparent px-3 py-2 text-sm placeholder:text-zinc-400 focus:outline-none focus:ring-1 focus:ring-zinc-900 dark:border-zinc-800 dark:focus:ring-zinc-300 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Singh@vikash.com">
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2 mb-6">
+                        <label for="service" class="text-sm font-medium text-zinc-900 dark:text-zinc-200">Service Interest</label>
+                        <div class="relative">
+                            <select id="service" class="flex h-10 w-full items-center justify-between rounded-md border border-zinc-200 bg-transparent px-3 py-2 text-sm placeholder:text-zinc-400 focus:outline-none focus:ring-1 focus:ring-zinc-900 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-800 dark:focus:ring-zinc-300 appearance-none">
+                                <option>Web Development</option>
+                                <option>Digital Marketing</option>
+                                <option>App Development</option>
+                                <option>Other</option>
+                            </select>
+                            <span class="absolute right-3 top-2.5 pointer-events-none text-zinc-500">
+                                <span class="iconify" data-icon="lucide:chevron-down" data-width="16"></span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 mb-6">
+                        <label for="message" class="text-sm font-medium text-zinc-900 dark:text-zinc-200">Message</label>
+                        <textarea id="message" rows="4" class="flex w-full rounded-md border border-zinc-200 bg-transparent px-3 py-2 text-sm placeholder:text-zinc-400 focus:outline-none focus:ring-1 focus:ring-zinc-900 dark:border-zinc-800 dark:focus:ring-zinc-300 disabled:cursor-not-allowed disabled:opacity-50 resize-none" placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <a href="https://wa.me/9096113197?text=Hii,%20I%20Wanted%20to%20make%20a%20Website%20for%20my%20business.">
+                        <button type="button" class="inline-flex h-10 w-full items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 dark:focus-visible:ring-zinc-300">
+                            Send Message
+                        </button>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2 lg:col-span-2">
+                    <a href="#" class="text-lg font-semibold tracking-tighter flex items-center gap-2 mb-4">
+                        VIKASH STUDIOS
+                    </a>
+                    <p class="text-sm text-zinc-500 dark:text-zinc-400 max-w-xs mb-6">
+                        Empowering businesses with cutting-edge software and strategic marketing solutions.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:twitter" data-width="20"></span></a>
+                        <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:github" data-width="20"></span></a>
+                        <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:instagram" data-width="20"></span></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-zinc-900 dark:text-white mb-4">Services</h4>
+                    <ul class="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">App Development</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Digital Marketing</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">UI/UX Design</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-zinc-900 dark:text-white mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+                        <li><a href="#about" class="hover:text-zinc-900 dark:hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#founders" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Team</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#contact" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-zinc-900 dark:text-white mb-4">Legal</h4>
+                    <ul class="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-200 dark:border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-zinc-500 dark:text-zinc-500">
+                    &copy; 2023 Vikash Studios. All rights reserved.
+                </p>
+                <div class="flex items-center gap-2">
+                     <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
+                    <span class="text-xs font-medium text-zinc-500 dark:text-zinc-400">All Systems Operational</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Script -->
+    <script>
+        // --- Theme Toggle Logic ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+
+        // --- Mobile Menu Logic ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            // Toggle visibility classes
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle Icons
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIconOpen.classList.remove('hidden');
+                menuIconClose.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore scrolling
+            } else {
+                menuIconOpen.classList.add('hidden');
+                menuIconClose.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Lock scrolling
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

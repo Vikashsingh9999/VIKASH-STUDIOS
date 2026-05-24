@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikash Studios | Web Development & IT Solutions Company in India</title>
+
+    <meta name="description" content="Vikash Studios is a professional web development and IT solutions agency offering websites, e-commerce, automation, mobile apps, and digital marketing across India." />
+    <link rel="canonical" href="https://www.vikashstudios.online/" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Vikash Studios",
+  "url": "https://www.vikashstudios.online",
+  "logo": "https://www.vikashstudios.com/Vikash Studios Logo.png",
+  "sameAs": [
+    "https://www.instagram.com/vikashstudios.online",
+    "https://www.linkedin.com/company/vikashstudios",
+    "https://github.com/vikashstudios.code"
+  ],
+  "description": "Vikash Studios is a web development and IT solutions company providing websites, e-commerce, automation, mobile apps and digital marketing services.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN"
+  }
+}
+</script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Icons -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <style>
+        /* Custom Utilities */
+        .glass {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        body, div, nav, footer, section, h1, h2, h3, p, span, a, button {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, transform;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3JMWR5RL09"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3JMWR5RL09');
+</script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17869248826"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17869248826');
+</script>
+<body class="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50 font-sans antialiased selection:bg-zinc-200 dark:selection:bg-zinc-800">
+
+    <!-- Header -->
+    <nav class="fixed top-0 w-full z-50 border-b border-zinc-200 dark:border-zinc-800 bg-white/80 dark:bg-zinc-950/80 glass">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between relative z-50">
+            <!-- Logo -->
+            <a href="#" class="text-lg font-semibold tracking-tighter flex items-center gap-2">
+                VIKASH STUDIOS
+            </a>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                <a href="#services" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Services</a>
+                <a href="#projects" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Projects</a>
+                <a href="#about" class="hover:text-zinc-900 dark:hover:text-white transition-colors">About</a>
+                <a href="#founders" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Team</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 transition-colors">
+                    <span class="iconify block dark:hidden" data-icon="lucide:sun" data-width="20" data-stroke-width="1.5"></span>
+                    <span class="iconify hidden dark:block" data-icon="lucide:moon" data-width="20" data-stroke-width="1.5"></span>
+                </button>
+                
+                <!-- Desktop CTA -->
+                <a href="https://wa.me/9096113197?text=Hii,%20I%20Wanted%20to%20make%20a%20Website%20for%20my%20business." class="hidden md:inline-flex h-9 items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90 dark:focus-visible:ring-zinc-300">
+                    Contact Us
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 -mr-2 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-white transition-colors">
+                    <span class="iconify" id="menu-icon-open" data-icon="lucide:menu" data-width="24" data-stroke-width="1.5"></span>
+                    <span class="iconify hidden" id="menu-icon-close" data-icon="lucide:x" data-width="24" data-stroke-width="1.5"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-x-0 top-16 z-40 hidden md:hidden border-b border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-xl h-[calc(100vh-4rem)] overflow-y-auto transform origin-top transition-all duration-300">
+            <div class="px-6 py-8 space-y-6">
+                <nav class="flex flex-col space-y-6 text-base font-medium text-zinc-600 dark:text-zinc-400">
+                    <a href="#services" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800/50 hover:text-zinc-900 dark:hover:text-white">
+                        Services <span class="iconify opacity-50" data-icon="lucide:chevron-right" data-width="16"></span>
+                    </a>
+                    <a href="#projects" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800/50 hover:text-zinc-900 dark:hover:text-white">
+                        Projects <span class="iconify opacity-50" data-icon="lucide:chevron-right" data-width="16"></span>
+                    </a>
+                    <a href="#about" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800/50 hover:text-zinc-900 dark:hover:text-white">
+                        About <span class="iconify opacity-50" data-icon="lucide:chevron-right" data-width="16"></span>
+                    </a>
+                    <a href="#founders" class="mobile-link flex items-center justify-between py-2 border-b border-zinc-100 dark:border-zinc-800/50 hover:text-zinc-900 dark:hover:text-white">
+                        Team <span class="iconify opacity-50" data-icon="lucide:chevron-right" data-width="16"></span>
+                    </a>
+                </nav>
+                
+                <div class="pt-4">
+                    <a href="https://wa.me/9096113197?text=Hii,%20I%20Wanted%20to%20make%20a%20Website%20for%20my%20business." class="mobile-link w-full flex h-11 items-center justify-center rounded-md bg-zinc-900 px-4 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90">
+                        Contact Us
+                    </a>
+                </div>
+
+                <div class="pt-8 mt-8 border-t border-zinc-100 dark:border-zinc-800 flex justify-center gap-8">
+                    <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:twitter" data-width="20"></span></a>
+                    <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:github" data-width="20"></span></a>
+                    <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:linkedin" data-width="20"></span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+   
+
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-28 pb-20 md:pt-32 md:pb-24 px-6 max-w-7xl mx-auto">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">Support & Maintenance Services</h1>
+                <p class="text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 mb-8 leading-relaxed">
+                    Reliable, proactive technical support and maintenance plans to keep your digital assets running smoothly, securely, and at peak performance.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/9096113197?text=Hii,%20I%27m%20interested%20in%20Support%20%26%20Maintenance%20plans%20for%20my%20website."
+                       class="inline-flex h-12 items-center justify-center rounded-md bg-zinc-900 px-8 text-base font-medium text-zinc-50 shadow transition-colors hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90">
+                        Get Support Now
+                    </a>
+                    <a href="#plans"
+                       class="inline-flex h-12 items-center justify-center rounded-md border border-zinc-300 dark:border-zinc-700 bg-transparent px-8 text-base font-medium shadow-sm transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800">
+                        View Plans
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Statement -->
+        <section class="py-16 px-6 max-w-7xl mx-auto">
+            <div class="bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-900/50 dark:to-zinc-950 rounded-2xl p-8 md:p-12 border border-zinc-200 dark:border-zinc-800">
+                <div class="max-w-3xl mx-auto text-center">
+                    <span class="inline-flex items-center rounded-full bg-red-100 dark:bg-red-900/30 px-4 py-2 text-sm font-medium text-red-700 dark:text-red-300 mb-6">
+                        <span class="iconify mr-2" data-icon="lucide:alert-circle" data-width="16"></span>
+                        Don't Let These Issues Disrupt Your Business
+                    </span>
+                    <h2 class="text-3xl font-bold mb-8">Your Website Requires Ongoing Care</h2>
+                    <div class="grid md:grid-cols-2 gap-6 mb-10">
+                        <div class="text-left p-6 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50">
+                            <span class="iconify text-red-500 mb-4 block" data-icon="lucide:x-circle" data-width="24"></span>
+                            <h3 class="font-semibold text-lg mb-2">Security Vulnerabilities</h3>
+                            <p class="text-zinc-600 dark:text-zinc-400">Outdated software exposes your site to hackers and malware attacks.</p>
+                        </div>
+                        <div class="text-left p-6 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50">
+                            <span class="iconify text-red-500 mb-4 block" data-icon="lucide:x-circle" data-width="24"></span>
+                            <h3 class="font-semibold text-lg mb-2">Performance Degradation</h3>
+                            <p class="text-zinc-600 dark:text-zinc-400">Slowing load times and broken features hurt user experience and SEO.</p>
+                        </div>
+                        <div class="text-left p-6 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50">
+                            <span class="iconify text-red-500 mb-4 block" data-icon="lucide:x-circle" data-width="24"></span>
+                            <h3 class="font-semibold text-lg mb-2">Broken Functionality</h3>
+                            <p class="text-zinc-600 dark:text-zinc-400">Plugin conflicts and compatibility issues break critical site features.</p>
+                        </div>
+                        <div class="text-left p-6 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50">
+                            <span class="iconify text-red-500 mb-4 block" data-icon="lucide:x-circle" data-width="24"></span>
+                            <h3 class="font-semibold text-lg mb-2">Downtime & Lost Revenue</h3>
+                            <p class="text-zinc-600 dark:text-zinc-400">Unexpected crashes lead to lost customers and damaged reputation.</p>
+                        </div>
+                    </div>
+                    <p class="text-lg text-zinc-700 dark:text-zinc-300">
+                        <span class="font-semibold">Solution:</span> Our comprehensive Support & Maintenance plans provide proactive monitoring, regular updates, and expert troubleshooting to prevent these issues.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Offered -->
+        <section class="py-16 px-6 max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Comprehensive Support Services</h2>
+                <p class="text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl mx-auto">We handle the technical details so you can focus on growing your business.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="group p-8 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all hover:shadow-lg">
+                    <div class="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                        <span class="iconify" data-icon="lucide:shield-check" data-width="28"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Security Management</h3>
+                    <ul class="space-y-3 text-zinc-600 dark:text-zinc-400">
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Regular security patches & updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Malware scanning & removal</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>SSL certificate management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Firewall configuration</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="group p-8 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all hover:shadow-lg">
+                    <div class="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 mb-6 group-hover:scale-110 transition-transform">
+                        <span class="iconify" data-icon="lucide:zap" data-width="28"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Performance Optimization</h3>
+                    <ul class="space-y-3 text-zinc-600 dark:text-zinc-400">
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Speed optimization & caching</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Database optimization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Uptime monitoring</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Regular backup & restoration testing</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="group p-8 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all hover:shadow-lg">
+                    <div class="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 mb-6 group-hover:scale-110 transition-transform">
+                        <span class="iconify" data-icon="lucide:refresh-cw" data-width="28"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Updates & Maintenance</h3>
+                    <ul class="space-y-3 text-zinc-600 dark:text-zinc-400">
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Core software updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Plugin/theme updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Compatibility testing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Staging environment management</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="group p-8 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all hover:shadow-lg">
+                    <div class="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 mb-6 group-hover:scale-110 transition-transform">
+                        <span class="iconify" data-icon="lucide:headphones" data-width="28"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Technical Support</h3>
+                    <ul class="space-y-3 text-zinc-600 dark:text-zinc-400">
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Priority email & chat support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Emergency phone support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Bug fixes & troubleshooting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Content updates (limited)</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="group p-8 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all hover:shadow-lg">
+                    <div class="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-cyan-100 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 mb-6 group-hover:scale-110 transition-transform">
+                        <span class="iconify" data-icon="lucide:bar-chart" data-width="28"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">SEO & Analytics</h3>
+                    <ul class="space-y-3 text-zinc-600 dark:text-zinc-400">
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>SEO health monitoring</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Google Analytics setup & monitoring</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Broken link checking</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Monthly performance reports</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="group p-8 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all hover:shadow-lg">
+                    <div class="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-pink-100 dark:bg-pink-900/30 text-pink-600 dark:text-pink-400 mb-6 group-hover:scale-110 transition-transform">
+                        <span class="iconify" data-icon="lucide:database" data-width="28"></span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Backup & Recovery</h3>
+                    <ul class="space-y-3 text-zinc-600 dark:text-zinc-400">
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Daily automated backups</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Off-site backup storage</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Disaster recovery planning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-2 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="16"></span>
+                            <span>Quick restoration services</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Plans -->
+        <section id="plans" class="py-16 px-6 max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Support & Maintenance Plans</h2>
+                <p class="text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl mx-auto">Choose the plan that fits your business needs. All plans include 24/7 monitoring and emergency support.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+                <!-- Basic Plan -->
+                <div class="rounded-2xl border border-zinc-300 dark:border-zinc-700 p-8 flex flex-col">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Essential Care</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 mb-6">For small websites with basic maintenance needs</p>
+                        <div class="flex items-baseline mb-2">
+                            <span class="text-4xl font-bold">₹4,999</span>
+                            <span class="text-zinc-600 dark:text-zinc-400 ml-2">/month</span>
+                        </div>
+                        <p class="text-sm text-zinc-500 dark:text-zinc-500">Billed annually or ₹5,999 monthly</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span>Weekly security updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span>Monthly performance optimization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span>Daily automated backups</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span>Email support (48-hr response)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span>Uptime monitoring</span>
+                        </li>
+                        <li class="flex items-start opacity-50">
+                            <span class="iconify text-zinc-400 mr-3 mt-1 flex-shrink-0" data-icon="lucide:x" data-width="18"></span>
+                            <span>Priority phone support</span>
+                        </li>
+                        <li class="flex items-start opacity-50">
+                            <span class="iconify text-zinc-400 mr-3 mt-1 flex-shrink-0" data-icon="lucide:x" data-width="18"></span>
+                            <span>Monthly content updates</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/9096113197?text=Hii,%20I%27m%20interested%20in%20the%20Essential%20Care%20plan."
+                       class="w-full inline-flex h-12 items-center justify-center rounded-md border border-zinc-300 dark:border-zinc-700 bg-transparent text-base font-medium shadow-sm transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800 mt-auto">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- Professional Plan (Featured) -->
+                <div class="rounded-2xl border-2 border-zinc-900 dark:border-zinc-50 bg-zinc-50 dark:bg-zinc-900 p-8 flex flex-col relative">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="inline-flex items-center rounded-full bg-zinc-900 dark:bg-zinc-50 px-4 py-1 text-xs font-medium text-zinc-50 dark:text-zinc-900">
+                            <span class="iconify mr-1" data-icon="lucide:star" data-width="12"></span>
+                            Most Popular
+                        </span>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Professional Care</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 mb-6">For growing businesses needing comprehensive support</p>
+                        <div class="flex items-baseline mb-2">
+                            <span class="text-4xl font-bold">₹9,999</span>
+                            <span class="text-zinc-600 dark:text-zinc-400 ml-2">/month</span>
+                        </div>
+                        <p class="text-sm text-zinc-500 dark:text-zinc-500">Billed annually or ₹11,999 monthly</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span><strong>Everything in Essential</strong></span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span>Daily security updates & monitoring</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span>Weekly performance optimization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span>Priority email & chat support (24-hr)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span>Monthly SEO health reports</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span>Up to 2 hours of content updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span>Emergency phone support</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/9096113197?text=Hii,%20I%27m%20interested%20in%20the%20Professional%20Care%20plan."
+                       class="w-full inline-flex h-12 items-center justify-center rounded-md bg-zinc-900 dark:bg-zinc-50 px-8 text-base font-medium text-zinc-50 dark:text-zinc-900 shadow transition-colors hover:bg-zinc-900/90 dark:hover:bg-zinc-50/90 mt-auto">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="rounded-2xl border border-zinc-300 dark:border-zinc-700 p-8 flex flex-col">
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Enterprise Care</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 mb-6">For mission-critical websites & applications</p>
+                        <div class="flex items-baseline mb-2">
+                            <span class="text-4xl font-bold">₹19,999</span>
+                            <span class="text-zinc-600 dark:text-zinc-400 ml-2">/month</span>
+                        </div>
+                        <p class="text-sm text-zinc-500 dark:text-zinc-500">Custom annual billing</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8 flex-grow">
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span><strong>Everything in Professional</strong></span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span>24/7 monitoring & immediate response</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span>Dedicated support manager</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span>Custom SLA with 99.9% uptime guarantee</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span>Unlimited content updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span>Weekly performance reports</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="iconify text-green-500 mr-3 mt-1 flex-shrink-0" data-icon="lucide:check" data-width="18"></span>
+                            <span>Custom development hours included</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/9096113197?text=Hii,%20I%27m%20interested%20in%20the%20Enterprise%20Care%20plan."
+                       class="w-full inline-flex h-12 items-center justify-center rounded-md border border-zinc-300 dark:border-zinc-700 bg-transparent text-base font-medium shadow-sm transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800 mt-auto">
+                        Contact for Custom Plan
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <p class="text-zinc-600 dark:text-zinc-400 mb-6">Need a custom plan? We can tailor a solution specifically for your business.</p>
+                <a href="https://wa.me/9096113197?text=Hii,%20I%20need%20a%20custom%20Support%20%26%20Maintenance%20plan%20for%20my%20business."
+                   class="inline-flex h-12 items-center justify-center rounded-md border border-zinc-300 dark:border-zinc-700 bg-transparent px-8 text-base font-medium shadow-sm transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800">
+                    <span class="iconify mr-2" data-icon="lucide:message-circle" data-width="18"></span>
+                    Discuss Custom Requirements
+                </a>
+            </div>
+        </section>
+
+        <!-- Process & FAQ -->
+        <section class="py-16 px-6 max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Our Process -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-8">Our Support Process</h2>
+                    <div class="space-y-8">
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-6">
+                                <div class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-bold text-lg">
+                                    1
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Initial Assessment</h3>
+                                <p class="text-zinc-600 dark:text-zinc-400">We conduct a comprehensive audit of your website to identify vulnerabilities, performance issues, and areas for improvement.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-6">
+                                <div class="flex items-center justify-center w-12 h-12 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 font-bold text-lg">
+                                    2
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Proactive Monitoring</h3>
+                                <p class="text-zinc-600 dark:text-zinc-400">Our systems continuously monitor your website for issues, allowing us to address potential problems before they affect your users.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-6">
+                                <div class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 font-bold text-lg">
+                                    3
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Regular Maintenance</h3>
+                                <p class="text-zinc-600 dark:text-zinc-400">We perform scheduled updates, optimizations, and security checks to keep your website running at its best.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-6">
+                                <div class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 font-bold text-lg">
+                                    4
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Reporting & Communication</h3>
+                                <p class="text-zinc-600 dark:text-zinc-400">You receive regular reports on website health, performance metrics, and completed maintenance activities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
+                    <div class="space-y-6">
+                        <div class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-6">
+                            <button class="faq-toggle w-full flex justify-between items-center text-left">
+                                <h3 class="font-semibold text-lg">What's included in your emergency support?</h3>
+                                <span class="iconify text-zinc-500 ml-4 flex-shrink-0" data-icon="lucide:chevron-down" data-width="20"></span>
+                            </button>
+                            <div class="faq-content mt-4 hidden">
+                                <p class="text-zinc-600 dark:text-zinc-400">Emergency support includes immediate response to critical issues like website downtime, security breaches, or functionality breakdowns. Response times vary by plan, with our Enterprise plan offering 24/7 immediate response.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-6">
+                            <button class="faq-toggle w-full flex justify-between items-center text-left">
+                                <h3 class="font-semibold text-lg">Do you support websites built by other developers?</h3>
+                                <span class="iconify text-zinc-500 ml-4 flex-shrink-0" data-icon="lucide:chevron-down" data-width="20"></span>
+                            </button>
+                            <div class="faq-content mt-4 hidden">
+                                <p class="text-zinc-600 dark:text-zinc-400">Absolutely! We provide maintenance and support for websites regardless of who built them. We begin with a thorough assessment to understand the codebase and infrastructure before starting regular maintenance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-6">
+                            <button class="faq-toggle w-full flex justify-between items-center text-left">
+                                <h3 class="font-semibold text-lg">How quickly do you respond to support requests?</h3>
+                                <span class="iconify text-zinc-500 ml-4 flex-shrink-0" data-icon="lucide:chevron-down" data-width="20"></span>
+                            </button>
+                            <div class="faq-content mt-4 hidden">
+                                <p class="text-zinc-600 dark:text-zinc-400">Response times vary by plan: Essential (48 hours), Professional (24 hours), and Enterprise (immediate for emergencies). We classify requests by priority to ensure critical issues receive immediate attention.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-zinc-200 dark:border-zinc-800 rounded-xl p-6">
+                            <button class="faq-toggle w-full flex justify-between items-center text-left">
+                                <h3 class="font-semibold text-lg">Can I cancel or change my plan anytime?</h3>
+                                <span class="iconify text-zinc-500 ml-4 flex-shrink-0" data-icon="lucide:chevron-down" data-width="20"></span>
+                            </button>
+                            <div class="faq-content mt-4 hidden">
+                                <p class="text-zinc-600 dark:text-zinc-400">Yes, you can upgrade, downgrade, or cancel your plan at any time. Monthly plans require 30 days' notice, while annual plans can be canceled with a prorated refund for unused months.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 px-6 max-w-7xl mx-auto">
+            <div class="bg-gradient-to-r from-zinc-900 to-zinc-800 dark:from-zinc-800 dark:to-zinc-900 rounded-2xl p-12 text-center text-white">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready for Stress-Free Website Management?</h2>
+                <p class="text-xl text-zinc-300 mb-10 max-w-2xl mx-auto">Let us handle the technical complexities while you focus on growing your business. Join 150+ satisfied clients who trust Vikash Studios with their digital assets.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/9096113197?text=Hii,%20I%27m%20ready%20to%20sign%20up%20for%20Support%20%26%20Maintenance%20services."
+                       class="inline-flex h-12 items-center justify-center rounded-md bg-white px-8 text-base font-medium text-zinc-900 shadow transition-colors hover:bg-zinc-100">
+                        Start Your Support Plan Today
+                    </a>
+                    <a href="tel:+919096113197"
+                       class="inline-flex h-12 items-center justify-center rounded-md border border-zinc-300 bg-transparent px-8 text-base font-medium hover:bg-white/10">
+                        <span class="iconify mr-2" data-icon="lucide:phone" data-width="18"></span>
+                        Call: +91 90961 13197
+                    </a>
+                </div>
+                <p class="text-zinc-400 text-sm mt-8">No long-term contracts required • 30-day money-back guarantee</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Add this script at the end of your existing script tag -->
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('.iconify');
+                
+                // Toggle content visibility
+                content.classList.toggle('hidden');
+                
+                // Toggle icon
+                if (content.classList.contains('hidden')) {
+                    icon.setAttribute('data-icon', 'lucide:chevron-down');
+                } else {
+                    icon.setAttribute('data-icon', 'lucide:chevron-up');
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2 lg:col-span-2">
+                    <a href="#" class="text-lg font-semibold tracking-tighter flex items-center gap-2 mb-4">
+                        VIKASH STUDIOS
+                    </a>
+                    <p class="text-sm text-zinc-500 dark:text-zinc-400 max-w-xs mb-6">
+                        Empowering businesses with cutting-edge software and strategic marketing solutions.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:twitter" data-width="20"></span></a>
+                        <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:github" data-width="20"></span></a>
+                        <a href="#" class="text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"><span class="iconify" data-icon="lucide:instagram" data-width="20"></span></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-zinc-900 dark:text-white mb-4">Services</h4>
+                    <ul class="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">App Development</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Digital Marketing</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">UI/UX Design</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-zinc-900 dark:text-white mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+                        <li><a href="#about" class="hover:text-zinc-900 dark:hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#founders" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Team</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#contact" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium text-zinc-900 dark:text-white mb-4">Legal</h4>
+                    <ul class="space-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-200 dark:border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-zinc-500 dark:text-zinc-500">
+                    &copy; 2023 Vikash Studios. All rights reserved.
+                </p>
+                <div class="flex items-center gap-2">
+                     <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
+                    <span class="text-xs font-medium text-zinc-500 dark:text-zinc-400">All Systems Operational</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Script -->
+    <script>
+        // --- Theme Toggle Logic ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+
+        // --- Mobile Menu Logic ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            // Toggle visibility classes
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle Icons
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIconOpen.classList.remove('hidden');
+                menuIconClose.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore scrolling
+            } else {
+                menuIconOpen.classList.add('hidden');
+                menuIconClose.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Lock scrolling
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
