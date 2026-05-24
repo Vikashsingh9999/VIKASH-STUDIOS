@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO: Name Searchable -->
+<title>Richa R. Gupta — Data Analyst & Data Scientist | Portfolio</title>
+<meta name="description" content="Richa R. Gupta — Data Analyst, Data Scientist, and Professional Trainer. Portfolio showcasing projects, dashboards, AI models, and analytics expertise.">
+<meta name="keywords" content="Richa Gupta, Richa R. Gupta, Data Analyst, Data Scientist, Professional Trainer, Portfolio, Dashboards, AI Models, Data Analytics, guptaricha1604@gmail.com">
+<meta name="author" content="Richa R. Gupta">
+<meta property="og:title" content="Richa R. Gupta — Data Analyst & Data Scientist">
+<meta property="og:description" content="Data Analyst, Data Scientist, and Professional Trainer. Explore projects, dashboards, and AI models.">
+<meta property="og:image" content="https://vikashstudios.online/Images/Richa.jpeg">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://richargupta.dev">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Bricolage+Grotesque:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ===== SCSS-Inspired Variables & Structure ===== */
+:root {
+  --bg-primary: #0a0a0b;
+  --bg-card: #141416;
+  --bg-elevated: #1c1c1e;
+  --border-subtle: rgba(255,255,255,0.06);
+  --border-default: rgba(255,255,255,0.10);
+  --border-hover: rgba(255,255,255,0.18);
+  --text-primary: #f5f5f7;
+  --text-secondary: rgba(255,255,255,0.55);
+  --text-tertiary: rgba(255,255,255,0.30);
+  --accent-emerald: #10b981;
+  --accent-blue: #3b82f6;
+  --accent-purple: #8b5cf6;
+  --accent-amber: #f59e0b;
+  --glow-emerald: 0 0 20px rgba(16,185,129,0.15);
+  --glow-blue: 0 0 20px rgba(59,130,246,0.15);
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-serif: 'Playfair Display', serif;
+}
+
+/* Reset & Base */
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: rgba(16,185,129,0.3); color: #fff; }
+
+/* Grain Overlay */
+.bg-grain {
+  position: fixed; inset: 0; z-index: 9999;
+  pointer-events: none; opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Animations */
+@keyframes cinematicEntrance {
+  0% { transform: scale(1.4); filter: blur(20px) grayscale(100%); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: scale(1); filter: blur(0px) grayscale(0%); opacity: 1; }
+}
+.animate-cinematic { animation: cinematicEntrance 3s cubic-bezier(0.22,1,0.36,1) forwards; }
+
+@keyframes slideUpFade {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up { animation: slideUpFade 1s ease-out forwards; }
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes shimmerMove {
+  0% { transform: translateX(-150%) skewX(-20deg); }
+  100% { transform: translateX(200%) skewX(-20deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(16,185,129,0.2); }
+  50% { box-shadow: 0 0 40px rgba(16,185,129,0.4); }
+}
+
+@keyframes barEqualizer {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.3); }
+}
+.bar-anim { transform-origin: bottom; animation: barEqualizer 2s cubic-bezier(0.4,0,0.2,1) infinite; }
+
+/* Scroll-triggered animations */
+.animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.animate-on-scroll.animate { opacity: 1; transform: translateY(0); }
+
+/* Hide scrollbar */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Pill Nav */
+.nav-blur { backdrop-filter: blur(24px) saturate(1.4); -webkit-backdrop-filter: blur(24px) saturate(1.4); }
+
+/* Card shimmer */
+.shimmer-overlay::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent);
+  transform: translateX(-100%);
+  animation: shimmerMove 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Glow effect for accent elements */
+.glow-emerald { box-shadow: var(--glow-emerald); }
+.glow-blue { box-shadow: var(--glow-blue); }
+
+/* Skill ring progress */
+.skill-ring { transition: stroke-dashoffset 1.5s ease; }
+
+/* Image border radius utilities */
+.img-rounded { border-radius: var(--radius-lg); }
+
+/* Tag styles */
+.tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 14px; border-radius: 9999px;
+  font-size: 11px; font-weight: 500; letter-spacing: 0.05em;
+  border: 1px solid var(--border-default);
+  background: rgba(255,255,255,0.04);
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+.tag:hover { background: rgba(255,255,255,0.08); border-color: var(--border-hover); color: var(--text-primary); }
+.tag-emerald { border-color: rgba(16,185,129,0.25); color: #34d399; background: rgba(16,185,129,0.08); }
+.tag-blue { border-color: rgba(59,130,246,0.25); color: #60a5fa; background: rgba(59,130,246,0.08); }
+.tag-purple { border-color: rgba(139,92,246,0.25); color: #a78bfa; background: rgba(139,92,246,0.08); }
+.tag-amber { border-color: rgba(245,158,11,0.25); color: #fbbf24; background: rgba(245,158,11,0.08); }
+
+/* Grid lines (subtle) */
+.grid-lines-bg {
+  position: fixed; inset: 0; width: 100%;
+  max-width: 80rem; margin: 0 auto; pointer-events: none;
+  z-index: 0; display: flex; justify-content: space-between;
+  padding: 0 1.5rem; opacity: 0.06;
+}
+.grid-lines-bg .line { width: 1px; height: 100%; background: rgba(255,255,255,0.15); }
+
+/* Section divider pulse */
+.section-divider {
+  position: relative; width: 100%; padding: 40px 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.section-divider .line-bg { position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: rgba(255,255,255,0.06); }
+.section-divider .line-accent { position: absolute; left: 12.5%; right: 12.5%; top: 50%; height: 1px; background: linear-gradient(90deg, transparent, rgba(16,185,129,0.3), transparent); }
+.section-divider .dot {
+  position: relative; width: 36px; height: 36px;
+  background: var(--bg-primary); border: 1px solid var(--border-default);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+}
+.section-divider .dot-inner {
+  width: 8px; height: 8px; background: var(--accent-emerald);
+  border-radius: 50%; animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Project card */
+.project-card {
+  position: relative; border-radius: var(--radius-xl);
+  overflow: hidden; background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.5s cubic-bezier(0.25,1,0.5,1);
+}
+.project-card:hover { border-color: var(--border-hover); transform: translateY(-4px); }
+.project-card .card-bg { position: absolute; inset: 0; z-index: 0; }
+.project-card .card-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.15; transition: all 0.7s ease; filter: grayscale(100%); }
+.project-card:hover .card-bg img { opacity: 0.3; transform: scale(1.05); filter: grayscale(0%); }
+.project-card .card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, var(--bg-card) 20%, transparent 70%); z-index: 1; }
+.project-card .card-content { position: relative; z-index: 2; padding: 32px; display: flex; flex-direction: column; height: 100%; min-height: 320px; justify-content: flex-end; }
+
+/* Stat counter */
+.stat-value { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.03em; }
+
+/* Contact link hover */
+.contact-link { position: relative; display: inline-flex; align-items: center; gap: 10px; padding: 8px 0; color: var(--text-secondary); transition: color 0.3s; }
+.contact-link::after { content: ''; position: absolute; bottom: 4px; left: 0; width: 0; height: 1px; background: var(--accent-emerald); transition: width 0.4s ease; }
+.contact-link:hover { color: var(--text-primary); }
+.contact-link:hover::after { width: 100%; }
+
+/* Name hero emphasis */
+.name-highlight { background: linear-gradient(135deg, #f5f5f7 0%, #10b981 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+/* Responsive grid helpers */
+.tech-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+
+/* Dashboard preview mockup */
+.dashboard-mock { border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-default); transition: all 0.4s ease; }
+.dashboard-mock:hover { border-color: var(--border-hover); transform: scale(1.02); }
+
+/* Chart bar (visual only) */
+.chart-bar { border-radius: 2px 2px 0 0; transition: height 0.6s ease; }
+
+/* Pulse dot for status */
+.pulse-dot { width: 8px; height: 8px; border-radius: 50%; animation: pulseGlow 2s ease-in-out infinite; }
+.pulse-dot.emerald { background: var(--accent-emerald); }
+.pulse-dot.blue { background: var(--accent-blue); }
+
+/* Floating data badge */
+.data-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 16px; border-radius: 12px;
+  background: rgba(0,0,0,0.5); backdrop-filter: blur(12px);
+  border: 1px solid var(--border-default);
+  font-size: 12px; font-family: var(--font-mono);
+}
+
+/* Career card */
+.career-card {
+  border-radius: var(--radius-lg); padding: 24px;
+  background: var(--bg-card); border: 1px solid var(--border-subtle);
+  transition: all 0.4s ease; cursor: default;
+}
+.career-card:hover { border-color: var(--border-hover); background: var(--bg-elevated); transform: translateY(-2px); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+
+/* Image styling */
+.profile-img {
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--border-default);
+  transition: all 0.5s ease;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.profile-img:hover { border-color: rgba(16,185,129,0.3); transform: scale(1.02); }
+
+@media (max-width: 768px) {
+  .tech-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+  .project-card .card-content { min-height: 260px; padding: 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Grain Overlay -->
+<div class="bg-grain"></div>
+
+<!-- Subtle Grid Lines -->
+<div class="grid-lines-bg">
+  <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+</div>
+
+<!-- ===== NAVIGATION ===== -->
+<div class="fixed flex animate-slide-up [animation-delay:0.3s] z-50 opacity-0 px-4 top-5 left-0 right-0 justify-center">
+  <nav class="flex transition-all duration-300 nav-blur bg-neutral-900/50 w-full max-w-4xl border border-white/10 rounded-full py-2 px-2 shadow-2xl items-center justify-between">
+    <div class="flex items-center gap-3 pl-4">
+      <div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-black shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+        <iconify-icon icon="solar:chart-square-bold-duotone" width="16"></iconify-icon>
+      </div>
+      <span class="font-bricolage text-base tracking-tight font-medium">Richa.G</span>
+    </div>
+    <div class="hidden md:flex items-center gap-6 text-sm font-medium text-white/50">
+      <a href="#about" class="hover:text-white transition-colors">About</a>
+      <a href="#expertise" class="hover:text-white transition-colors">Expertise</a>
+      <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+      <a href="#dashboards" class="hover:text-white transition-colors">Dashboards</a>
+      <a href="#ai-models" class="hover:text-white transition-colors">AI Models</a>
+      <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+    </div>
+    <div class="flex items-center gap-2">
+      <a href="#contact" class="hidden sm:inline-flex px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-xs font-mono text-emerald-400 hover:bg-emerald-500/20 transition-colors uppercase tracking-wider">
+        Hire Me
+      </a>
+      <button class="w-10 h-10 rounded-full flex items-center justify-center text-white/50 hover:text-white hover:bg-white/5 transition-colors md:hidden" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <iconify-icon icon="solar:menu-dots-square-linear" width="20"></iconify-icon>
+      </button>
+    </div>
+  </nav>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden absolute top-full mt-3 w-full max-w-sm mx-auto bg-neutral-900/90 backdrop-blur-2xl border border-white/10 rounded-2xl p-4 shadow-2xl">
+    <div class="flex flex-col gap-2 text-sm">
+      <a href="#about" class="px-4 py-3 rounded-xl hover:bg-white/5 transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
+      <a href="#expertise" class="px-4 py-3 rounded-xl hover:bg-white/5 transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Expertise</a>
+      <a href="#projects" class="px-4 py-3 rounded-xl hover:bg-white/5 transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Projects</a>
+      <a href="#dashboards" class="px-4 py-3 rounded-xl hover:bg-white/5 transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Dashboards</a>
+      <a href="#ai-models" class="px-4 py-3 rounded-xl hover:bg-white/5 transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">AI Models</a>
+      <a href="#contact" class="px-4 py-3 rounded-xl hover:bg-white/5 transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HERO SECTION (Centered) ===== -->
+<header class="relative w-full overflow-hidden flex flex-col items-center justify-center min-h-screen pt-16 md:pt-20">
+  <div class="absolute inset-0 z-0 bg-black">
+    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/25904405-aa15-491b-9a03-de5fc75f18b3_3840w.webp"
+         class="w-full h-full object-cover animate-cinematic opacity-0" alt="Background">
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-neutral-950/70 opacity-90"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-emerald-900/15 to-transparent opacity-40"></div>
+  </div>
+
+  <!-- Status Badge -->
+  <div class="absolute top-28 right-6 md:right-12 z-20 animate-slide-up [animation-delay:1s] opacity-0">
+    <div class="data-badge">
+      <span class="pulse-dot emerald"></span>
+      <span class="text-white/80">Available for Projects</span>
+    </div>
+  </div>
+
+  <div class="relative z-10 w-full max-w-4xl mx-auto px-6 text-center">
+    <!-- Decorative top label -->
+    <div class="flex items-center justify-center gap-3 mb-8 animate-slide-up [animation-delay:0.4s] opacity-0">
+      <span class="h-[1px] w-8 bg-emerald-500/60"></span>
+      <span class="text-xs font-mono uppercase tracking-[0.25em] text-emerald-400/70">Portfolio 2025</span>
+      <span class="h-[1px] w-8 bg-emerald-500/60"></span>
+    </div>
+
+    <!-- Profile Photo -->
+    <div class="mb-8 animate-slide-up [animation-delay:0.6s] opacity-0">
+      <div class="relative inline-block">
+        <div class="absolute -inset-1 rounded-full bg-gradient-to-b from-emerald-500/30 via-blue-500/20 to-transparent blur-md opacity-70"></div>
+        <img src="https://vikashstudios.online/Images/Richa.jpeg"
+             alt="Richa R. Gupta — Data Analyst and Data Scientist"
+             class="relative w-36 h-36 md:w-44 md:h-44 object-cover rounded-full border-2 border-white/20 shadow-2xl"
+             loading="eager">
+        <div class="absolute -bottom-1 -right-1 w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center border-2 border-neutral-950 shadow-lg">
+          <iconify-icon icon="solar:check-circle-bold" class="text-white" width="18"></iconify-icon>
+        </div>
+      </div>
+    </div>
+
+    <!-- Name - Modern font, centered -->
+    <h1 class="font-bricolage leading-[1.05] tracking-tight font-bold mb-4 animate-slide-up [animation-delay:0.8s] opacity-0">
+      <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white drop-shadow-2xl">
+        Richa Gupta
+      </span>
+    </h1>
+
+    <!-- Roles -->
+    <div class="flex flex-wrap justify-center gap-3 mb-8 animate-slide-up [animation-delay:1s] opacity-0">
+      <span class="tag tag-emerald text-sm py-2 px-5">Data Analyst</span>
+      <span class="tag tag-blue text-sm py-2 px-5">Data Scientist</span>
+      <span class="tag tag-purple text-sm py-2 px-5">Professional Trainer</span>
+    </div>
+
+    <!-- Tagline -->
+    <p class="text-white/50 text-base md:text-lg font-light max-w-xl mx-auto leading-relaxed animate-slide-up [animation-delay:1.2s] opacity-0">
+      Turning raw data into strategic decisions — specializing in machine learning,
+      statistical analysis, and transformative data storytelling.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-wrap justify-center gap-4 mt-10 animate-slide-up [animation-delay:1.4s] opacity-0">
+      <a href="#projects"
+         class="px-7 py-3.5 bg-white text-black rounded-full text-sm font-medium hover:bg-neutral-200 transition-all flex items-center gap-2 shadow-lg shadow-white/10">
+        <iconify-icon icon="solar:folder-check-linear" width="16"></iconify-icon>
+        View Projects
+      </a>
+      <a href="#contact"
+         class="px-7 py-3.5 border border-white/20 rounded-full text-sm font-medium text-white/70 hover:text-white hover:border-white/40 transition-all flex items-center gap-2">
+        <iconify-icon icon="solar:chat-round-dots-linear" width="16"></iconify-icon>
+        Get in Touch
+      </a>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="flex justify-center gap-8 md:gap-12 mt-12 animate-slide-up [animation-delay:1.6s] opacity-0">
+      <div class="text-center">
+        <span class="block text-2xl md:text-3xl font-bricolage text-white">5+</span>
+        <span class="text-[9px] uppercase tracking-[0.2em] text-white/40 mt-1 block">Years Exp</span>
+      </div>
+      <div class="w-px bg-white/10"></div>
+      <div class="text-center">
+        <span class="block text-2xl md:text-3xl font-bricolage text-white">50+</span>
+        <span class="text-[9px] uppercase tracking-[0.2em] text-white/40 mt-1 block">Projects</span>
+      </div>
+      <div class="w-px bg-white/10"></div>
+      <div class="text-center">
+        <span class="block text-2xl md:text-3xl font-bricolage text-white">500+</span>
+        <span class="text-[9px] uppercase tracking-[0.2em] text-white/40 mt-1 block">Trainees</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-slide-up [animation-delay:2s] opacity-0">
+    <span class="text-[9px] uppercase tracking-[0.2em] text-white/30 font-mono">Scroll</span>
+    <div class="w-[1px] h-10 bg-gradient-to-b from-white/40 to-transparent"></div>
+  </div>
+</header>
+
+<!-- Divider -->
+<div class="section-divider">
+  <div class="line-bg"></div>
+  <div class="line-accent"></div>
+  <div class="dot"><div class="dot-inner"></div></div>
+</div>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section id="about" class="py-20 md:py-28 bg-neutral-950 relative overflow-hidden">
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[60vw] h-[400px] bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <!-- Left: About Text -->
+      <div>
+        <div class="flex items-center gap-3 mb-6 animate-on-scroll">
+          <span class="w-8 h-[1px] bg-emerald-500"></span>
+          <span class="text-emerald-500 text-xs font-mono uppercase tracking-widest">About Me</span>
+        </div>
+        <h2 class="text-4xl md:text-6xl font-bricolage font-medium mb-6 leading-tight animate-on-scroll">
+          Data <span class="text-white/30">Architect.</span><br>
+          Insight <span class="text-white/30">Engineer.</span>
+        </h2>
+        <div class="space-y-4 text-white/50 text-lg font-light leading-relaxed animate-on-scroll delay-100">
+          <p>
+            I'm <strong class="text-white">Richa R. Gupta</strong> — a data professional with a passion for
+            uncovering patterns hidden within complexity. With a foundation in
+            applied mathematics and a career spanning analytics, machine learning,
+            and education, I help organizations move from data-rich to insight-driven.
+          </p>
+          <p>
+            As a <strong class="text-white">Professional Trainer</strong>, I've empowered 500+ professionals
+            across Fortune 500 companies to master data science, AI, and analytics
+            — translating technical depth into actionable knowledge.
+          </p>
+        </div>
+
+        <!-- Philosophy -->
+        <div class="mt-10 p-6 rounded-2xl bg-white/5 border border-white/5 animate-on-scroll delay-200">
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0">
+              <iconify-icon icon="solar:quote-linear" class="text-emerald-400" width="20"></iconify-icon>
+            </div>
+            <div>
+              <p class="text-white/70 text-sm italic leading-relaxed">
+                "Data is not just numbers — it's the narrative of what was,
+                what is, and what could be. My work is about giving that
+                narrative a voice."
+              </p>
+              <span class="text-xs text-white/30 mt-2 block font-mono">— Richa R. Gupta</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="flex flex-wrap gap-4 mt-10 animate-on-scroll delay-300">
+          <a href="#projects" class="px-6 py-3 bg-white text-black rounded-full text-sm font-medium hover:bg-neutral-200 transition-colors flex items-center gap-2">
+            View Projects
+            <iconify-icon icon="solar:arrow-right-linear" class="group-hover:translate-x-1 transition-transform" width="16"></iconify-icon>
+          </a>
+          <a href="#contact" class="px-6 py-3 border border-white/20 rounded-full text-sm font-medium text-white/70 hover:text-white hover:border-white/40 transition-colors">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Data Analytics Visual -->
+      <div class="animate-on-scroll delay-100">
+        <div class="rounded-[2rem] overflow-hidden border border-white/10 bg-neutral-900/50 p-6 md:p-8">
+          <!-- Top: Domain Expertise -->
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500/20 to-blue-500/20 border border-white/10 flex items-center justify-center">
+              <iconify-icon icon="solar:chart-square-linear" class="text-emerald-400" width="20"></iconify-icon>
+            </div>
+            <div>
+              <span class="text-sm font-bricolage text-white">Domain Expertise</span>
+              <span class="text-[9px] font-mono text-white/30 block uppercase tracking-wider">Cross-Industry</span>
+            </div>
+          </div>
+
+          <!-- Domain Tags -->
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="tag tag-emerald text-[10px]">Finance & Banking</span>
+            <span class="tag tag-blue text-[10px]">Healthcare</span>
+            <span class="tag tag-purple text-[10px]">E-Commerce</span>
+            <span class="tag tag-amber text-[10px]">Supply Chain</span>
+            <span class="tag tag-emerald text-[10px]">Telecom</span>
+            <span class="tag tag-blue text-[10px]">Manufacturing</span>
+          </div>
+
+          <!-- Visual: Data Flow Diagram -->
+          <div class="bg-white/5 rounded-2xl p-6 border border-white/5 mb-6">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[10px] font-mono uppercase tracking-wider text-white/30">Analytics Pipeline</span>
+              <span class="pulse-dot emerald"></span>
+            </div>
+            <div class="grid grid-cols-4 gap-2 text-center">
+              <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
+                <iconify-icon icon="solar:database-linear" class="text-emerald-400" width="18"></iconify-icon>
+                <p class="text-[9px] text-white/50 mt-1 font-medium">Data</p>
+              </div>
+              <div class="flex items-center justify-center text-white/20">
+                <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
+              </div>
+              <div class="p-3 rounded-xl bg-blue-500/10 border border-blue-500/20">
+                <iconify-icon icon="solar:magic-stick-3-linear" class="text-blue-400" width="18"></iconify-icon>
+                <p class="text-[9px] text-white/50 mt-1 font-medium">Analyze</p>
+              </div>
+              <div class="flex items-center justify-center text-white/20">
+                <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
+              </div>
+              <div class="p-3 rounded-xl bg-purple-500/10 border border-purple-500/20">
+                <iconify-icon icon="solar:chart-square-linear" class="text-purple-400" width="18"></iconify-icon>
+                <p class="text-[9px] text-white/50 mt-1 font-medium">Visualize</p>
+              </div>
+              <div class="flex items-center justify-center text-white/20">
+                <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
+              </div>
+              <div class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20">
+                <iconify-icon icon="solar:target-linear" class="text-amber-400" width="18"></iconify-icon>
+                <p class="text-[9px] text-white/50 mt-1 font-medium">Decide</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stat Tiles -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="career-card text-center p-5">
+              <span class="stat-value text-3xl md:text-4xl text-emerald-400">50+</span>
+              <span class="text-[10px] text-white/40 mt-1 block uppercase tracking-wider">Projects Delivered</span>
+              <div class="w-full h-1 bg-white/5 rounded-full mt-3 overflow-hidden"><div class="h-full bg-emerald-500 w-[90%] rounded-full"></div></div>
+            </div>
+            <div class="career-card text-center p-5">
+              <span class="stat-value text-3xl md:text-4xl text-blue-400">500+</span>
+              <span class="text-[10px] text-white/40 mt-1 block uppercase tracking-wider">Professionals Trained</span>
+              <div class="w-full h-1 bg-white/5 rounded-full mt-3 overflow-hidden"><div class="h-full bg-blue-500 w-[95%] rounded-full"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="section-divider">
+  <div class="line-bg"></div>
+  <div class="line-accent"></div>
+  <div class="dot"><div class="dot-inner"></div></div>
+</div>
+
+<!-- ===== EXPERTISE / TECH STACK SECTION ===== -->
+<section id="expertise" class="py-20 md:py-28 bg-neutral-950 relative overflow-hidden border-t border-white/5">
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+  <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <div class="flex items-center justify-center gap-3 mb-6 animate-on-scroll">
+        <span class="w-8 h-[1px] bg-emerald-500"></span>
+        <span class="text-emerald-500 text-xs font-mono uppercase tracking-widest">Tech Stack</span>
+        <span class="w-8 h-[1px] bg-emerald-500"></span>
+      </div>
+      <h2 class="text-4xl md:text-7xl font-bricolage font-medium tracking-tighter animate-on-scroll">
+        Dual <span class="text-white/30">Expertise.</span>
+      </h2>
+      <p class="text-white/40 text-lg mt-4 max-w-2xl mx-auto animate-on-scroll delay-100">
+        Bridging the gap between raw data and business intelligence — proficient
+        across the full analytics and data science lifecycle.
+      </p>
+    </div>
+
+    <!-- Two-column expertise -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Data Analyst Column -->
+      <div class="rounded-[2rem] border border-white/5 bg-neutral-900/30 p-8 md:p-10 animate-on-scroll delay-100">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+            <iconify-icon icon="solar:chart-square-linear" class="text-emerald-400" width="28"></iconify-icon>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bricolage text-white">Data Analyst</h3>
+            <p class="text-xs text-white/40 font-mono mt-1">SQL · BI · Visualization</p>
+          </div>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tag tag-emerald">SQL</div>
+          <div class="tag tag-emerald">Excel</div>
+          <div class="tag tag-emerald">Tableau</div>
+          <div class="tag tag-emerald">Power BI</div>
+          <div class="tag tag-emerald">Python</div>
+          <div class="tag tag-emerald">Pandas</div>
+          <div class="tag tag-emerald">NumPy</div>
+          <div class="tag tag-emerald">Statistics</div>
+          <div class="tag tag-emerald">Data Viz</div>
+          <div class="tag tag-emerald">ETL Pipelines</div>
+          <div class="tag tag-emerald">BigQuery</div>
+          <div class="tag tag-emerald">Looker</div>
+        </div>
+
+        <p class="text-white/40 text-sm mt-8 leading-relaxed">
+          Transforming complex datasets into intuitive dashboards and actionable
+          reports. Expert in data cleaning, exploratory analysis, and KPI
+          tracking that drives strategic decisions.
+        </p>
+
+        <!-- Skill bars -->
+        <div class="mt-8 space-y-4">
+          <div><div class="flex justify-between text-xs mb-1.5"><span class="text-white/60">SQL & ETL</span><span class="text-emerald-400 font-mono">95%</span></div><div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="h-full bg-emerald-500 rounded-full w-[95%] glow-emerald"></div></div></div>
+          <div><div class="flex justify-between text-xs mb-1.5"><span class="text-white/60">Tableau / Power BI</span><span class="text-emerald-400 font-mono">90%</span></div><div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="h-full bg-emerald-500 rounded-full w-[90%]"></div></div></div>
+          <div><div class="flex justify-between text-xs mb-1.5"><span class="text-white/60">Python (Pandas/NumPy)</span><span class="text-emerald-400 font-mono">88%</span></div><div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="h-full bg-emerald-500 rounded-full w-[88%]"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Data Scientist Column -->
+      <div class="rounded-[2rem] border border-white/5 bg-neutral-900/30 p-8 md:p-10 animate-on-scroll delay-200">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+            <iconify-icon icon="solar:atom-linear" class="text-blue-400" width="28"></iconify-icon>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bricolage text-white">Data Scientist</h3>
+            <p class="text-xs text-white/40 font-mono mt-1">ML · DL · NLP · MLOps</p>
+          </div>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tag tag-blue">Machine Learning</div>
+          <div class="tag tag-blue">Deep Learning</div>
+          <div class="tag tag-blue">NLP</div>
+          <div class="tag tag-blue">TensorFlow</div>
+          <div class="tag tag-blue">PyTorch</div>
+          <div class="tag tag-blue">Scikit-learn</div>
+          <div class="tag tag-blue">Python</div>
+          <div class="tag tag-blue">R</div>
+          <div class="tag tag-blue">Statistical Modeling</div>
+          <div class="tag tag-blue">Time Series</div>
+          <div class="tag tag-blue">LLMs</div>
+          <div class="tag tag-blue">MLOps</div>
+        </div>
+
+        <p class="text-white/40 text-sm mt-8 leading-relaxed">
+          Building production-grade ML models that solve real problems. From
+          predictive forecasting and NLP pipelines to deep learning systems —
+          I architect solutions that scale.
+        </p>
+
+        <!-- Skill bars -->
+        <div class="mt-8 space-y-4">
+          <div><div class="flex justify-between text-xs mb-1.5"><span class="text-white/60">ML / Deep Learning</span><span class="text-blue-400 font-mono">92%</span></div><div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="h-full bg-blue-500 rounded-full w-[92%] glow-blue"></div></div></div>
+          <div><div class="flex justify-between text-xs mb-1.5"><span class="text-white/60">NLP & LLMs</span><span class="text-blue-400 font-mono">85%</span></div><div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="h-full bg-blue-500 rounded-full w-[85%]"></div></div></div>
+          <div><div class="flex justify-between text-xs mb-1.5"><span class="text-white/60">Statistical Modeling</span><span class="text-blue-400 font-mono">90%</span></div><div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="h-full bg-blue-500 rounded-full w-[90%]"></div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Professional Trainer Section -->
+    <div class="mt-8 rounded-[2rem] border border-amber-500/10 bg-gradient-to-r from-amber-500/5 to-transparent p-8 md:p-10 animate-on-scroll delay-300">
+      <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0">
+          <iconify-icon icon="solar:presentation-graph-linear" class="text-amber-400" width="28"></iconify-icon>
+        </div>
+        <div class="flex-1">
+          <h3 class="text-2xl font-bricolage text-white mb-2">Professional Trainer</h3>
+          <p class="text-white/40 text-sm leading-relaxed max-w-2xl">
+            Certified corporate trainer with a track record of upskilling 500+ professionals
+            in Data Science, Machine Learning, Python, SQL, Power BI, and AI strategy.
+            Custom curriculum design for Fortune 500 teams, workshops, and bootcamps.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="tag tag-amber">Workshop Facilitation</span>
+            <span class="tag tag-amber">Curriculum Design</span>
+            <span class="tag tag-amber">Corporate Training</span>
+            <span class="tag tag-amber">Bootcamps</span>
+            <span class="tag tag-amber">Mentorship</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="section-divider">
+  <div class="line-bg"></div>
+  <div class="line-accent"></div>
+  <div class="dot"><div class="dot-inner"></div></div>
+</div>
+
+<!-- ===== PROJECTS SECTION ===== -->
+<section id="projects" class="py-20 md:py-28 bg-neutral-950 relative overflow-hidden border-t border-white/5">
+  <div class="absolute bottom-0 left-0 w-[60vw] h-[500px] bg-purple-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+      <div class="max-w-3xl animate-on-scroll">
+        <div class="flex items-center gap-3 mb-4 text-emerald-400">
+          <iconify-icon icon="solar:folder-check-linear" width="16"></iconify-icon>
+          <span class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400/80">Featured Work</span>
+        </div>
+        <h2 class="text-4xl md:text-7xl font-bricolage font-medium tracking-tighter leading-[0.9]">
+          Analytics <span class="text-white/30">Projects.</span>
+        </h2>
+      </div>
+      <div class="flex gap-2 animate-on-scroll delay-100">
+        <span class="tag">Data Analysis</span>
+        <span class="tag tag-blue">ML</span>
+        <span class="tag tag-purple">NLP</span>
+      </div>
+    </div>
+
+    <!-- Project Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Project 1 -->
+      <div class="project-card animate-on-scroll delay-100">
+        <div class="card-bg"><img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/68494c15-da1d-47aa-a9ac-b6ee8c9286cc_800w.webp" alt="Project visualization"></div>
+        <div class="card-overlay"></div>
+        <div class="card-content">
+          <div class="flex gap-2 mb-4">
+            <span class="tag tag-blue text-[10px]">Machine Learning</span>
+            <span class="tag tag-amber text-[10px]">Python</span>
+          </div>
+          <h3 class="text-2xl font-bricolage text-white mb-2">Customer Segmentation Engine</h3>
+          <p class="text-white/50 text-sm leading-relaxed mb-6">
+            Unsupervised ML model clustering 2M+ customer records using K-Means
+            and PCA. Drove a 23% increase in campaign ROI.
+          </p>
+          <div class="flex items-center justify-between pt-4 border-t border-white/5">
+            <div class="flex items-center gap-2 text-[10px] font-mono text-white/30 uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Deployed
+            </div>
+            <a href="#" class="text-white/30 hover:text-emerald-400 transition-colors text-xs">Details →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card animate-on-scroll delay-200">
+        <div class="card-bg"><img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/25904405-aa15-491b-9a03-de5fc75f18b3_3840w.webp" alt="Sales Forecasting"></div>
+        <div class="card-overlay"></div>
+        <div class="card-content">
+          <div class="flex gap-2 mb-4">
+            <span class="tag tag-blue text-[10px]">Time Series</span>
+            <span class="tag tag-emerald text-[10px]">Power BI</span>
+          </div>
+          <h3 class="text-2xl font-bricolage text-white mb-2">Sales Forecasting Dashboard</h3>
+          <p class="text-white/50 text-sm leading-relaxed mb-6">
+            ARIMA + Prophet hybrid model with interactive Power BI dashboard.
+            Achieved 94% forecast accuracy for quarterly revenue planning.
+          </p>
+          <div class="flex items-center justify-between pt-4 border-t border-white/5">
+            <div class="flex items-center gap-2 text-[10px] font-mono text-white/30 uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Live
+            </div>
+            <a href="#" class="text-white/30 hover:text-emerald-400 transition-colors text-xs">Details →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card animate-on-scroll delay-300">
+        <div class="card-bg"><img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/44d41d4e-32d5-4432-bf2b-95b01b1df21f_320w.webp" alt="NLP Project"></div>
+        <div class="card-overlay"></div>
+        <div class="card-content">
+          <div class="flex gap-2 mb-4">
+            <span class="tag tag-purple text-[10px]">NLP</span>
+            <span class="tag tag-blue text-[10px]">Transformers</span>
+          </div>
+          <h3 class="text-2xl font-bricolage text-white mb-2">Sentiment Analysis Pipeline</h3>
+          <p class="text-white/50 text-sm leading-relaxed mb-6">
+            Fine-tuned BERT-based model for real-time social media sentiment.
+            Processing 10K+ posts/min with 91% F1 score.
+          </p>
+          <div class="flex items-center justify-between pt-4 border-t border-white/5">
+            <div class="flex items-center gap-2 text-[10px] font-mono text-white/30 uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Production
+            </div>
+            <a href="#" class="text-white/30 hover:text-emerald-400 transition-colors text-xs">Details →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card animate-on-scroll delay-100">
+        <div class="card-bg"><img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/ee3841e8-ef6d-45b3-9f33-9df069f9708a_1600w.webp" alt="Churn Prediction"></div>
+        <div class="card-overlay"></div>
+        <div class="card-content">
+          <div class="flex gap-2 mb-4">
+            <span class="tag tag-blue text-[10px]">Classification</span>
+            <span class="tag tag-amber text-[10px]">Python</span>
+          </div>
+          <h3 class="text-2xl font-bricolage text-white mb-2">Churn Prediction System</h3>
+          <p class="text-white/50 text-sm leading-relaxed mb-6">
+            XGBoost-based churn predictor with feature importance analysis.
+            Reduced customer attrition by 18% for a telecom client.
+          </p>
+          <div class="flex items-center justify-between pt-4 border-t border-white/5">
+            <div class="flex items-center gap-2 text-[10px] font-mono text-white/30 uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Deployed
+            </div>
+            <a href="#" class="text-white/30 hover:text-emerald-400 transition-colors text-xs">Details →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card animate-on-scroll delay-200">
+        <div class="card-bg"><img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a5122f84-43cb-4170-94c3-aded75f0d3ed_320w.webp" alt="Recommendation Engine"></div>
+        <div class="card-overlay"></div>
+        <div class="card-content">
+          <div class="flex gap-2 mb-4">
+            <span class="tag tag-blue text-[10px]">Recommender</span>
+            <span class="tag tag-purple text-[10px]">Deep Learning</span>
+          </div>
+          <h3 class="text-2xl font-bricolage text-white mb-2">Recommendation Engine</h3>
+          <p class="text-white/50 text-sm leading-relaxed mb-6">
+            Collaborative filtering + neural network hybrid for e-commerce.
+            Increased average order value by 15% and click-through by 32%.
+          </p>
+          <div class="flex items-center justify-between pt-4 border-t border-white/5">
+            <div class="flex items-center gap-2 text-[10px] font-mono text-white/30 uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Scaled
+            </div>
+            <a href="#" class="text-white/30 hover:text-emerald-400 transition-colors text-xs">Details →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project-card animate-on-scroll delay-300">
+        <div class="card-bg"><img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/7de1229a-6a54-423d-a41c-2377d871bf2c_320w.jpg" alt="Supply Chain Analytics"></div>
+        <div class="card-overlay"></div>
+        <div class="card-content">
+          <div class="flex gap-2 mb-4">
+            <span class="tag tag-emerald text-[10px]">Analytics</span>
+            <span class="tag tag-blue text-[10px]">Optimization</span>
+          </div>
+          <h3 class="text-2xl font-bricolage text-white mb-2">Supply Chain Optimizer</h3>
+          <p class="text-white/50 text-sm leading-relaxed mb-6">
+            End-to-end analytics solution using Python, SQL, and Tableau.
+            Reduced logistics costs by 22% and improved delivery SLA by 15%.
+          </p>
+          <div class="flex items-center justify-between pt-4 border-t border-white/5">
+            <div class="flex items-center gap-2 text-[10px] font-mono text-white/30 uppercase tracking-wider">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Delivered
+            </div>
+            <a href="#" class="text-white/30 hover:text-emerald-400 transition-colors text-xs">Details →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 text-center animate-on-scroll">
+      <a href="#" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-mono text-white/50 hover:text-white hover:bg-white/5 transition-all uppercase tracking-widest border border-transparent hover:border-white/10">
+        View All Projects
+        <iconify-icon icon="solar:arrow-right-linear" width="14" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="section-divider">
+  <div class="line-bg"></div>
+  <div class="line-accent"></div>
+  <div class="dot"><div class="dot-inner"></div></div>
+</div>
+
+<!-- ===== DASHBOARDS SECTION ===== -->
+<section id="dashboards" class="py-20 md:py-28 bg-neutral-950 relative overflow-hidden border-t border-white/5">
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+      <div class="max-w-3xl animate-on-scroll">
+        <div class="flex items-center gap-3 mb-4 text-emerald-400">
+          <iconify-icon icon="solar:square-top-up-linear" width="16"></iconify-icon>
+          <span class="text-xs font-mono uppercase tracking-[0.2em] text-emerald-400/80">Visual Analytics</span>
+        </div>
+        <h2 class="text-4xl md:text-7xl font-bricolage font-medium tracking-tighter leading-[0.9]">
+          Dashboards <span class="text-white/30">&amp; Reports.</span>
+        </h2>
+      </div>
+      <div class="flex gap-2 animate-on-scroll delay-100">
+        <span class="tag tag-emerald">Tableau</span>
+        <span class="tag tag-emerald">Power BI</span>
+        <span class="tag tag-emerald">Looker</span>
+      </div>
+    </div>
+
+    <!-- Dashboard Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- Dashboard 1: Sales Dashboard Mock -->
+      <div class="dashboard-mock bg-neutral-900/50 p-6 md:p-8 animate-on-scroll delay-100">
+        <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+              <iconify-icon icon="solar:chart-2-linear" class="text-emerald-400" width="20"></iconify-icon>
+            </div>
+            <div>
+              <h3 class="text-lg font-bricolage text-white">Revenue & Sales Dashboard</h3>
+              <span class="text-[10px] font-mono text-white/30 uppercase tracking-wider">Power BI · Real-time</span>
+            </div>
+          </div>
+          <div class="flex gap-1">
+            <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+            <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+            <div class="w-2 h-2 rounded-full bg-purple-500"></div>
+          </div>
+        </div>
+
+        <!-- Mock Chart Area -->
+        <div class="bg-white/5 rounded-2xl p-5 border border-white/5">
+          <!-- Bars -->
+          <div class="flex items-end justify-between gap-2 h-32 mb-4">
+            <div class="chart-bar bg-emerald-500 w-full h-[40%] opacity-80"></div>
+            <div class="chart-bar bg-emerald-500 w-full h-[65%] opacity-80"></div>
+            <div class="chart-bar bg-emerald-500 w-full h-[50%] opacity-80"></div>
+            <div class="chart-bar bg-emerald-500 w-full h-[80%] opacity-80"></div>
+            <div class="chart-bar bg-emerald-500 w-full h-[60%] opacity-80"></div>
+            <div class="chart-bar bg-emerald-500 w-full h-[90%] opacity-80"></div>
+            <div class="chart-bar bg-emerald-500 w-full h-[75%] opacity-80"></div>
+            <div class="chart-bar bg-emerald-500 w-full h-[55%] opacity-80"></div>
+            <div class="chart-bar bg-emerald-500 w-full h-[85%] opacity-80"></div>
+            <div class="chart-bar bg-emerald-500 w-full h-[70%] opacity-80"></div>
+            <div class="chart-bar bg-emerald-500 w-full h-[45%] opacity-80"></div>
+            <div class="chart-bar bg-emerald-500 w-full h-[95%] opacity-80"></div>
+          </div>
+          <!-- Legend -->
+          <div class="flex items-center justify-between text-[10px] text-white/30 font-mono">
+            <span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span><span>MAY</span><span>JUN</span>
+            <span>JUL</span><span>AUG</span><span>SEP</span><span>OCT</span><span>NOV</span><span>DEC</span>
+          </div>
+        </div>
+
+        <!-- KPI Row -->
+        <div class="grid grid-cols-3 gap-4 mt-5">
+          <div><span class="block text-xl font-bricolage text-emerald-400">$12.4M</span><span class="text-[10px] text-white/30 uppercase tracking-wider">Revenue</span></div>
+          <div><span class="block text-xl font-bricolage text-emerald-400">23%</span><span class="text-[10px] text-white/30 uppercase tracking-wider">Growth</span></div>
+          <div><span class="block text-xl font-bricolage text-emerald-400">4.8K</span><span class="text-[10px] text-white/30 uppercase tracking-wider">Orders</span></div>
+        </div>
+      </div>
+
+      <!-- Dashboard 2: Operations Dashboard -->
+      <div class="dashboard-mock bg-neutral-900/50 p-6 md:p-8 animate-on-scroll delay-200">
+        <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+              <iconify-icon icon="solar:chart-2-linear" class="text-blue-400" width="20"></iconify-icon>
+            </div>
+            <div>
+              <h3 class="text-lg font-bricolage text-white">Operations KPI Tracker</h3>
+              <span class="text-[10px] font-mono text-white/30 uppercase tracking-wider">Tableau · Daily Sync</span>
+            </div>
+          </div>
+          <div class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
+        </div>
+
+        <!-- Gauge mockups -->
+        <div class="grid grid-cols-3 gap-4 mb-5">
+          <div class="bg-white/5 rounded-2xl p-4 text-center border border-white/5">
+            <div class="text-3xl font-bricolage text-blue-400">94%</div>
+            <div class="text-[9px] text-white/30 uppercase tracking-wider mt-1">SLA Met</div>
+            <div class="w-full h-1 bg-white/10 rounded-full mt-3 overflow-hidden"><div class="h-full bg-blue-500 w-[94%] rounded-full"></div></div>
+          </div>
+          <div class="bg-white/5 rounded-2xl p-4 text-center border border-white/5">
+            <div class="text-3xl font-bricolage text-blue-400">87%</div>
+            <div class="text-[9px] text-white/30 uppercase tracking-wider mt-1">Utilization</div>
+            <div class="w-full h-1 bg-white/10 rounded-full mt-3 overflow-hidden"><div class="h-full bg-blue-500 w-[87%] rounded-full"></div></div>
+          </div>
+          <div class="bg-white/5 rounded-2xl p-4 text-center border border-white/5">
+            <div class="text-3xl font-bricolage text-blue-400">2.4m</div>
+            <div class="text-[9px] text-white/30 uppercase tracking-wider mt-1">Units/ Day</div>
+            <div class="w-full h-1 bg-white/10 rounded-full mt-3 overflow-hidden"><div class="h-full bg-blue-500 w-[78%] rounded-full"></div></div>
+          </div>
+        </div>
+
+        <!-- Mini line chart area -->
+        <div class="bg-white/5 rounded-2xl p-5 border border-white/5">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs text-white/50 font-mono">Weekly Trend</span>
+            <span class="text-[10px] text-blue-400 font-mono">+12% ↑</span>
+          </div>
+          <div class="flex items-end justify-between gap-1.5 h-20">
+            <div class="w-full bg-blue-500/30 h-[30%] rounded-sm"></div>
+            <div class="w-full bg-blue-500/40 h-[45%] rounded-sm"></div>
+            <div class="w-full bg-blue-500/50 h-[55%] rounded-sm"></div>
+            <div class="w-full bg-blue-500/60 h-[40%] rounded-sm"></div>
+            <div class="w-full bg-blue-500/70 h-[70%] rounded-sm"></div>
+            <div class="w-full bg-blue-500/80 h-[60%] rounded-sm"></div>
+            <div class="w-full bg-blue-500 h-[85%] rounded-sm"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard 3: Marketing Analytics -->
+      <div class="dashboard-mock bg-neutral-900/50 p-6 md:p-8 animate-on-scroll delay-300">
+        <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
+              <iconify-icon icon="solar:chart-2-linear" class="text-purple-400" width="20"></iconify-icon>
+            </div>
+            <div>
+              <h3 class="text-lg font-bricolage text-white">Marketing Analytics Suite</h3>
+              <span class="text-[10px] font-mono text-white/30 uppercase tracking-wider">Looker · Cohort Analysis</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cohort-style grid -->
+        <div class="bg-white/5 rounded-2xl p-5 border border-white/5">
+          <div class="grid grid-cols-7 gap-1 mb-1">
+            <div class="text-[8px] text-white/20 font-mono text-center">W1</div>
+            <div class="text-[8px] text-white/20 font-mono text-center">W2</div>
+            <div class="text-[8px] text-white/20 font-mono text-center">W3</div>
+            <div class="text-[8px] text-white/20 font-mono text-center">W4</div>
+            <div class="text-[8px] text-white/20 font-mono text-center">W5</div>
+            <div class="text-[8px] text-white/20 font-mono text-center">W6</div>
+            <div class="text-[8px] text-white/20 font-mono text-center">W7</div>
+          </div>
+          <div class="space-y-1">
+            <div class="grid grid-cols-7 gap-1"> <div class="h-6 rounded bg-purple-500/30"></div> <div class="h-6 rounded bg-purple-500/20"></div> <div class="h-6 rounded bg-purple-500/15"></div> <div class="h-6 rounded bg-purple-500/10"></div> <div class="h-6 rounded bg-purple-500/8"></div> <div class="h-6 rounded bg-purple-500/5"></div> <div class="h-6 rounded bg-purple-500/3"></div> </div>
+            <div class="grid grid-cols-7 gap-1"> <div class="h-6 rounded bg-purple-500/40"></div> <div class="h-6 rounded bg-purple-500/30"></div> <div class="h-6 rounded bg-purple-500/20"></div> <div class="h-6 rounded bg-purple-500/15"></div> <div class="h-6 rounded bg-purple-500/10"></div> <div class="h-6 rounded bg-purple-500/8"></div> <div class="h-6 rounded bg-purple-500/5"></div> </div>
+            <div class="grid grid-cols-7 gap-1"> <div class="h-6 rounded bg-purple-500/50"></div> <div class="h-6 rounded bg-purple-500/40"></div> <div class="h-6 rounded bg-purple-500/30"></div> <div class="h-6 rounded bg-purple-500/20"></div> <div class="h-6 rounded bg-purple-500/15"></div> <div class="h-6 rounded bg-purple-500/10"></div> <div class="h-6 rounded bg-purple-500/8"></div> </div>
+          </div>
+        </div>
+        <div class="mt-4 flex items-center justify-between text-xs">
+          <span class="text-white/40 font-mono">Cohort Retention</span>
+          <span class="text-purple-400 font-mono">Avg 68%</span>
+        </div>
+      </div>
+
+      <!-- Dashboard 4: Financial Analytics -->
+      <div class="dashboard-mock bg-neutral-900/50 p-6 md:p-8 animate-on-scroll delay-200">
+        <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+              <iconify-icon icon="solar:chart-2-linear" class="text-amber-400" width="20"></iconify-icon>
+            </div>
+            <div>
+              <h3 class="text-lg font-bricolage text-white">Financial Risk Analysis</h3>
+              <span class="text-[10px] font-mono text-white/30 uppercase tracking-wider">Python · Power BI</span>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white/5 rounded-2xl p-5 border border-white/5">
+            <span class="text-[10px] uppercase tracking-wider text-white/30 block mb-2">Risk Score</span>
+            <span class="text-4xl font-bricolage text-amber-400">68</span>
+            <div class="w-full h-1.5 bg-white/10 rounded-full mt-3 overflow-hidden"><div class="h-full bg-amber-500 w-[68%] rounded-full"></div></div>
+          </div>
+          <div class="bg-white/5 rounded-2xl p-5 border border-white/5">
+            <span class="text-[10px] uppercase tracking-wider text-white/30 block mb-2">Portfolio</span>
+            <span class="text-4xl font-bricolage text-amber-400">$8.2B</span>
+            <span class="text-[10px] text-white/20 block mt-1">Under Management</span>
+          </div>
+        </div>
+        <div class="mt-4 text-center">
+          <a href="#" class="inline-flex items-center gap-1.5 text-[11px] font-mono text-white/30 hover:text-amber-400 transition-colors uppercase tracking-wider">
+            View Full Analysis <iconify-icon icon="solar:arrow-right-linear" width="12"></iconify-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center mt-12 animate-on-scroll">
+      <a href="#contact" class="group inline-flex items-center gap-3 px-6 py-3 rounded-full text-xs font-mono text-white/50 hover:text-white hover:bg-white/5 transition-all uppercase tracking-widest border border-transparent hover:border-white/10">
+        Request Custom Dashboard
+        <iconify-icon icon="solar:arrow-right-linear" width="14" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="section-divider">
+  <div class="line-bg"></div>
+  <div class="line-accent"></div>
+  <div class="dot"><div class="dot-inner"></div></div>
+</div>
+
+<!-- ===== AI MODELS SECTION ===== -->
+<section id="ai-models" class="py-20 md:py-28 bg-neutral-950 relative overflow-hidden border-t border-white/5">
+  <div class="absolute bottom-0 left-0 w-[50vw] h-[400px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+      <div class="max-w-3xl animate-on-scroll">
+        <div class="flex items-center gap-3 mb-4 text-blue-400">
+          <iconify-icon icon="solar:atom-linear" width="16"></iconify-icon>
+          <span class="text-xs font-mono uppercase tracking-[0.2em] text-blue-400/80">Artificial Intelligence</span>
+        </div>
+        <h2 class="text-4xl md:text-7xl font-bricolage font-medium tracking-tighter leading-[0.9]">
+          AI <span class="text-white/30">Models.</span>
+        </h2>
+      </div>
+      <div class="flex gap-2 animate-on-scroll delay-100">
+        <span class="tag tag-blue">TensorFlow</span>
+        <span class="tag tag-purple">PyTorch</span>
+        <span class="tag tag-blue">Scikit-learn</span>
+      </div>
+    </div>
+
+    <!-- AI Models Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+      <!-- Model 1 -->
+      <div class="group relative rounded-[1.5rem] bg-neutral-900/40 border border-white/5 p-6 hover:bg-neutral-900/60 hover:border-blue-500/20 transition-all duration-500 animate-on-scroll delay-100">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-blue-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <iconify-icon icon="solar:brain-linear" class="text-blue-400" width="22"></iconify-icon>
+        </div>
+        <h3 class="text-lg font-bricolage text-white mb-2">Predictive Maintenance</h3>
+        <p class="text-xs text-white/40 leading-relaxed mb-5">
+          LSTM-based model predicting equipment failure 48h in advance with 96% accuracy.
+          Deployed on IoT sensor data stream.
+        </p>
+        <div class="flex items-center gap-2">
+          <span class="tag tag-blue text-[9px]">LSTM</span>
+          <span class="tag tag-purple text-[9px]">TensorFlow</span>
+          <span class="text-[10px] text-white/20 ml-auto">96%</span>
+        </div>
+      </div>
+
+      <!-- Model 2 -->
+      <div class="group relative rounded-[1.5rem] bg-neutral-900/40 border border-white/5 p-6 hover:bg-neutral-900/60 hover:border-purple-500/20 transition-all duration-500 animate-on-scroll delay-200">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <iconify-icon icon="solar:chat-round-linear" class="text-purple-400" width="22"></iconify-icon>
+        </div>
+        <h3 class="text-lg font-bricolage text-white mb-2">NLP Text Classifier</h3>
+        <p class="text-xs text-white/40 leading-relaxed mb-5">
+          Fine-tuned DistilBERT for multi-label document classification.
+          15 categories, 97% precision, sub-100ms inference.
+        </p>
+        <div class="flex items-center gap-2">
+          <span class="tag tag-purple text-[9px]">BERT</span>
+          <span class="tag tag-blue text-[9px]">Transformers</span>
+          <span class="text-[10px] text-white/20 ml-auto">97%</span>
+        </div>
+      </div>
+
+      <!-- Model 3 -->
+      <div class="group relative rounded-[1.5rem] bg-neutral-900/40 border border-white/5 p-6 hover:bg-neutral-900/60 hover:border-emerald-500/20 transition-all duration-500 animate-on-scroll delay-300">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <iconify-icon icon="solar:chart-square-linear" class="text-emerald-400" width="22"></iconify-icon>
+        </div>
+        <h3 class="text-lg font-bricolage text-white mb-2">Time Series Forecaster</h3>
+        <p class="text-xs text-white/40 leading-relaxed mb-5">
+          Prophet + XGBoost hybrid for multi-horizon demand forecasting.
+          Used by retail clients for inventory optimization.
+        </p>
+        <div class="flex items-center gap-2">
+          <span class="tag tag-emerald text-[9px]">Prophet</span>
+          <span class="tag tag-blue text-[9px]">XGBoost</span>
+          <span class="text-[10px] text-white/20 ml-auto">94%</span>
+        </div>
+      </div>
+
+      <!-- Model 4 -->
+      <div class="group relative rounded-[1.5rem] bg-neutral-900/40 border border-white/5 p-6 hover:bg-neutral-900/60 hover:border-amber-500/20 transition-all duration-500 animate-on-scroll delay-200">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 border border-amber-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <iconify-icon icon="solar:gallery-wide-linear" class="text-amber-400" width="22"></iconify-icon>
+        </div>
+        <h3 class="text-lg font-bricolage text-white mb-2">Image Recognition CNN</h3>
+        <p class="text-xs text-white/40 leading-relaxed mb-5">
+          Custom CNN architecture for defect detection in manufacturing.
+          Achieves 99.2% accuracy on production line imagery.
+        </p>
+        <div class="flex items-center gap-2">
+          <span class="tag tag-amber text-[9px]">CNN</span>
+          <span class="tag tag-blue text-[9px]">PyTorch</span>
+          <span class="text-[10px] text-white/20 ml-auto">99%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Model Pipeline visual -->
+    <div class="mt-12 rounded-[2rem] bg-white/5 border border-white/5 p-8 md:p-10 animate-on-scroll delay-200">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-blue-500/20 border border-white/10 flex items-center justify-center">
+          <iconify-icon icon="solar:code-linear" class="text-white" width="24"></iconify-icon>
+        </div>
+        <div>
+          <h3 class="text-xl font-bricolage text-white">End-to-End ML Pipeline</h3>
+          <span class="text-xs text-white/30 font-mono">Data → Model → Deployment → Monitoring</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/5">
+          <iconify-icon icon="solar:database-linear" class="text-emerald-400" width="24"></iconify-icon>
+          <p class="text-xs text-white/60 mt-2 font-medium">Data Ingestion</p>
+          <span class="text-[9px] text-white/20">SQL · APIs · Streams</span>
+        </div>
+        <div class="hidden md:flex items-center justify-center text-white/10">
+          <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+        </div>
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/5">
+          <iconify-icon icon="solar:magic-stick-3-linear" class="text-blue-400" width="24"></iconify-icon>
+          <p class="text-xs text-white/60 mt-2 font-medium">Feature Engineering</p>
+          <span class="text-[9px] text-white/20">Python · Pandas</span>
+        </div>
+        <div class="hidden md:flex items-center justify-center text-white/10">
+          <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+        </div>
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/5">
+          <iconify-icon icon="solar:atom-linear" class="text-purple-400" width="24"></iconify-icon>
+          <p class="text-xs text-white/60 mt-2 font-medium">Model Training</p>
+          <span class="text-[9px] text-white/20">Scikit-learn · TF</span>
+        </div>
+        <div class="hidden md:flex items-center justify-center text-white/10">
+          <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+        </div>
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/5">
+          <iconify-icon icon="solar:cloud-check-linear" class="text-amber-400" width="24"></iconify-icon>
+          <p class="text-xs text-white/60 mt-2 font-medium">Deployment</p>
+          <span class="text-[9px] text-white/20">API · Docker · Cloud</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="section-divider">
+  <div class="line-bg"></div>
+  <div class="line-accent"></div>
+  <div class="dot"><div class="dot-inner"></div></div>
+</div>
+
+<!-- ===== TRAINING / METHODOLOGY SECTION ===== -->
+<section id="methodology" class="py-20 md:py-28 bg-neutral-950 relative overflow-hidden border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+    <div class="text-center mb-16 animate-on-scroll">
+      <div class="flex items-center justify-center gap-3 mb-6">
+        <span class="w-8 h-[1px] bg-amber-500"></span>
+        <span class="text-amber-500 text-xs font-mono uppercase tracking-widest">Training Philosophy</span>
+        <span class="w-8 h-[1px] bg-amber-500"></span>
+      </div>
+      <h2 class="text-4xl md:text-7xl font-bricolage font-medium tracking-tighter animate-on-scroll">
+        Learn. Build. <span class="text-white/30">Deploy.</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="career-card text-center p-10 animate-on-scroll delay-100">
+        <div class="w-16 h-16 rounded-full bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mx-auto mb-6">
+          <span class="text-3xl font-bricolage text-amber-400">01</span>
+        </div>
+        <h3 class="text-xl font-bricolage text-white mb-3">Custom Curriculum</h3>
+        <p class="text-sm text-white/40 leading-relaxed">
+          Every training program is tailored to the team's skill level and business
+          context. No cookie-cutter slides — just relevant, hands-on learning.
+        </p>
+      </div>
+      <div class="career-card text-center p-10 animate-on-scroll delay-200">
+        <div class="w-16 h-16 rounded-full bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mx-auto mb-6">
+          <span class="text-3xl font-bricolage text-amber-400">02</span>
+        </div>
+        <h3 class="text-xl font-bricolage text-white mb-3">Live Workshops</h3>
+        <p class="text-sm text-white/40 leading-relaxed">
+          Real-time coding sessions with real datasets. Participants build
+          production-ready pipelines and models during the workshop.
+        </p>
+      </div>
+      <div class="career-card text-center p-10 animate-on-scroll delay-300">
+        <div class="w-16 h-16 rounded-full bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mx-auto mb-6">
+          <span class="text-3xl font-bricolage text-amber-400">03</span>
+        </div>
+        <h3 class="text-xl font-bricolage text-white mb-3">Post-Training Support</h3>
+        <p class="text-sm text-white/40 leading-relaxed">
+          Learning doesn't end at the workshop. Includes 30 days of mentorship,
+          code reviews, and Q&A sessions to ensure lasting impact.
+        </p>
+      </div>
+    </div>
+
+    <!-- Testimonials / Trust Bar -->
+    <div class="mt-16 rounded-[2rem] bg-white/5 border border-white/5 p-8 md:p-12 animate-on-scroll">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-white/30">Trusted By</span>
+          <div class="grid grid-cols-3 gap-6 mt-6 opacity-30">
+            <div class="text-white font-bricolage text-lg font-bold">PwC</div>
+            <div class="text-white font-bricolage text-lg font-bold">Deloitte.</div>
+            <div class="text-white font-bricolage text-lg font-bold">TCS</div>
+            <div class="text-white font-bricolage text-lg font-bold">Amazon</div>
+            <div class="text-white font-bricolage text-lg font-bold">JPMorgan</div>
+            <div class="text-white font-bricolage text-lg font-bold">Accenture</div>
+          </div>
+        </div>
+        <div class="border-l border-white/10 pl-10">
+          <iconify-icon icon="solar:quote-linear" class="text-amber-400/50" width="32"></iconify-icon>
+          <p class="text-white/60 text-sm italic leading-relaxed mt-4 mb-4">
+            "Richa's training program transformed our data team. Within 3 months,
+            we went from basic Excel reports to deploying our first ML model in production."
+          </p>
+          <span class="text-xs text-white/30 font-mono">— VP of Analytics, Fortune 500 Client</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="section-divider">
+  <div class="line-bg"></div>
+  <div class="line-accent"></div>
+  <div class="dot"><div class="dot-inner"></div></div>
+</div>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section id="contact" class="py-20 md:py-28 bg-neutral-950 relative overflow-hidden border-t border-white/5">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[500px] bg-emerald-500/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <!-- Left: Info -->
+      <div>
+        <div class="flex items-center gap-3 mb-6 animate-on-scroll">
+          <span class="w-8 h-[1px] bg-emerald-500"></span>
+          <span class="text-emerald-500 text-xs font-mono uppercase tracking-widest">Connect</span>
+        </div>
+        <h2 class="text-4xl md:text-7xl font-bricolage font-medium mb-6 leading-tight animate-on-scroll">
+          Let's Build
+          <br>
+          <span class="text-white/30">Something</span>
+          <br>
+          <span class="text-white">Intelligent.</span>
+        </h2>
+        <p class="text-white/50 text-lg font-light max-w-lg mb-10 animate-on-scroll delay-100">
+          Have a project, training need, or data challenge? Let's turn your
+          data into your greatest asset.
+        </p>
+
+        <!-- Contact Details -->
+        <div class="space-y-6 animate-on-scroll delay-200">
+          <!-- Phone -->
+          <div class="flex items-center gap-5 group">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0 group-hover:bg-emerald-500/20 transition-colors">
+              <iconify-icon icon="solar:phone-calling-rounded-linear" class="text-emerald-400" width="22"></iconify-icon>
+            </div>
+            <div>
+              <span class="text-[10px] font-mono uppercase tracking-widest text-white/30">Phone / WhatsApp</span>
+              <a href="tel:+918097926437" class="contact-link text-white text-lg font-medium">+91 8097926437</a>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="flex items-center gap-5 group">
+            <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0 group-hover:bg-blue-500/20 transition-colors">
+              <iconify-icon icon="solar:letter-linear" class="text-blue-400" width="22"></iconify-icon>
+            </div>
+            <div>
+              <span class="text-[10px] font-mono uppercase tracking-widest text-white/30">Email</span>
+              <a href="/cdn-cgi/l/email-protection#8aedfffafeebf8e3e9e2ebbbbcbabecaede7ebe3e6a4e9e5e7" class="contact-link text-white text-lg font-medium"><span class="__cf_email__" data-cfemail="5d3a282d293c2f343e353c6c6b6d691d3a303c3431733e3230">[email&#160;protected]</span></a>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div class="flex items-center gap-5 group">
+            <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center shrink-0 group-hover:bg-purple-500/20 transition-colors">
+              <iconify-icon icon="solar:map-point-linear" class="text-purple-400" width="22"></iconify-icon>
+            </div>
+            <div>
+              <span class="text-[10px] font-mono uppercase tracking-widest text-white/30">Location</span>
+              <span class="text-white text-lg font-medium block">India (Remote / On-site)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="flex flex-wrap gap-3 mt-10 animate-on-scroll delay-300">
+          <a href="/cdn-cgi/l/email-protection#8aedfffafeebf8e3e9e2ebbbbcbabecaede7ebe3e6a4e9e5e7b5f9ffe8e0efe9feb7daf8e5e0efe9feafb8bac3e4fbffe3f8f3" class="px-6 py-3 bg-white text-black rounded-full text-sm font-medium hover:bg-neutral-200 transition-colors flex items-center gap-2">
+            <iconify-icon icon="solar:letter-linear" width="16"></iconify-icon>
+            Send Email
+          </a>
+          <a href="https://wa.me/918097926437" target="_blank" class="px-6 py-3 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-sm font-medium text-emerald-400 hover:bg-emerald-500/20 transition-colors flex items-center gap-2">
+            <iconify-icon icon="logos:whatsapp-icon" width="16"></iconify-icon>
+            WhatsApp Me
+          </a>
+          <a href="#" class="px-6 py-3 border border-white/10 rounded-full text-sm font-medium text-white/50 hover:text-white hover:border-white/30 transition-colors flex items-center gap-2">
+            <iconify-icon icon="solar:document-linear" width="16"></iconify-icon>
+            Download Resume
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div class="animate-on-scroll delay-200">
+        <div class="rounded-[2rem] bg-neutral-900/40 border border-white/10 p-8 md:p-10 backdrop-blur-2xl relative overflow-hidden">
+          <div class="shimmer-overlay"></div>
+          <div class="relative z-10">
+            <h3 class="text-2xl font-bricolage text-white mb-6">Send a Message</h3>
+
+            <form id="contact-form" class="space-y-5" onsubmit="handleSubmit(event)">
+              <div>
+                <label class="block text-xs font-mono uppercase tracking-wider text-white/30 mb-2">Name</label>
+                <input type="text" required placeholder="Your name" class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-emerald-500/40 transition-colors">
+              </div>
+              <div>
+                <label class="block text-xs font-mono uppercase tracking-wider text-white/30 mb-2">Email</label>
+                <input type="email" required placeholder="your@email.com" class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-emerald-500/40 transition-colors">
+              </div>
+              <div>
+                <label class="block text-xs font-mono uppercase tracking-wider text-white/30 mb-2">Subject</label>
+                <select class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-sm text-white/70 focus:outline-none focus:border-emerald-500/40 transition-colors">
+                  <option value="" disabled selected>Select a topic</option>
+                  <option value="project">Data Analytics Project</option>
+                  <option value="ai">AI / ML Model Development</option>
+                  <option value="training">Training & Workshops</option>
+                  <option value="consulting">Consulting</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-mono uppercase tracking-wider text-white/30 mb-2">Message</label>
+                <textarea rows="4" required placeholder="Tell me about your project..." class="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-3.5 text-sm text-white placeholder:text-white/20 focus:outline-none focus:border-emerald-500/40 transition-colors resize-none"></textarea>
+              </div>
+              <button type="submit" class="w-full py-4 bg-white text-black rounded-2xl text-sm font-medium hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2 group">
+                <span>Send Message</span>
+                <iconify-icon icon="solar:arrow-right-linear" width="16" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+              </button>
+            </form>
+            <p id="form-status" class="text-xs text-emerald-400 mt-4 text-center hidden opacity-0 transition-opacity">Message sent successfully!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="py-12 border-t border-white/5 bg-neutral-950 relative">
+  <div class="max-w-7xl mx-auto px-6 md:px-12">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-black">
+          <iconify-icon icon="solar:chart-square-bold-duotone" width="16"></iconify-icon>
+        </div>
+        <span class="font-bricolage text-base font-medium">Richa <span class="text-white/40">R. Gupta</span></span>
+      </div>
+      <div class="flex items-center gap-6 text-xs text-white/30">
+        <span class="font-mono">Data Analyst</span>
+        <span class="w-1 h-1 rounded-full bg-white/20"></span>
+        <span class="font-mono">Data Scientist</span>
+        <span class="w-1 h-1 rounded-full bg-white/20"></span>
+        <span class="font-mono">Professional Trainer</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="/cdn-cgi/l/email-protection#30574540445142595358510106000470575d51595c1e535f5d" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all">
+          <iconify-icon icon="solar:letter-linear" width="16"></iconify-icon>
+        </a>
+        <a href="https://wa.me/918097926437" target="_blank" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all">
+          <iconify-icon icon="logos:whatsapp-icon" width="16"></iconify-icon>
+        </a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all">
+          <iconify-icon icon="logos:linkedin-icon" width="16"></iconify-icon>
+        </a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all">
+          <iconify-icon icon="logos:github-icon" width="16"></iconify-icon>
+        </a>
+      </div>
+    </div>
+    <div class="mt-8 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-white/20 font-mono">
+      <span>&copy; 2025 Richa R. Gupta. All rights reserved.</span>
+      <span>Built with data · Driven by insight</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// SCSS-style organization: Intersection Observer for scroll animations
+(function() {
+  'use strict';
+
+  // Initialize scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+  });
+
+  // Handle form submission
+  window.handleSubmit = function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const status = document.getElementById('form-status');
+    const btn = form.querySelector('button[type="submit"]');
+    const originalText = btn.innerHTML;
+
+    btn.innerHTML = 'Sending...';
+    btn.disabled = true;
+
+    // Simulate send (client-side only, replace with actual endpoint)
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+      form.reset();
+      status.classList.remove('hidden');
+      status.classList.add('opacity-100');
+      setTimeout(() => {
+        status.classList.add('hidden');
+        status.classList.remove('opacity-100');
+      }, 4000);
+    }, 1500);
+  };
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#') return;
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Mobile menu close on click outside
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobile-menu');
+    const btn = menu?.previousElementSibling;
+    if (menu && !menu.contains(e.target) && !btn?.contains(e.target)) {
+      menu.classList.add('hidden');
+    }
+  });
+
+  // Parallax effect on hero (optional)
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const hero = document.querySelector('header');
+    if (hero && scrollY < window.innerHeight) {
+      const bg = hero.querySelector('.absolute.inset-0 img');
+      if (bg) {
+        bg.style.transform = `translateY(${scrollY * 0.15}px) scale(${1 + scrollY * 0.0003})`;
+      }
+    }
+  });
+
+  // SEO structured data
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Richa R. Gupta",
+    "givenName": "Richa",
+    "familyName": "Gupta",
+    "jobTitle": ["Data Analyst", "Data Scientist", "Professional Trainer"],
+    "email": "guptaricha1604@gmail.com",
+    "telephone": "+918097926437",
+    "image": "https://vikashstudios.online/Images/Richa.jpeg",
+    "url": "https://richargupta.dev",
+    "knowsAbout": ["Data Analysis", "Data Science", "Machine Learning", "Deep Learning", "NLP", "SQL", "Python", "Tableau", "Power BI", "TensorFlow", "PyTorch", "Statistical Modeling"],
+    "description": "Richa R. Gupta is a Data Analyst, Data Scientist, and Professional Trainer with 5+ years of experience in analytics, machine learning, and corporate training."
+  };
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
+
+})();
+</script>
+
+<!-- Explicit name mentions for searchability (hidden but indexed) -->
+<div aria-hidden="false" class="sr-only">
+  <h1>Richa R. Gupta</h1>
+  <h2>Data Analyst, Data Scientist, Professional Trainer</h2>
+  <p>Richa Gupta portfolio showcasing data analytics projects, machine learning models, dashboards, AI solutions, and training expertise. Contact: +91 8097926437, <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="761103060217041f151e174740464236111b171f1a5815191b">[email&#160;protected]</a></p>
+  <p>Richa R. Gupta specializes in SQL, Python, Tableau, Power BI, Machine Learning, Deep Learning, NLP, TensorFlow, PyTorch, Statistics, and Data Visualization. Professional trainer for Fortune 500 companies.</p>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
