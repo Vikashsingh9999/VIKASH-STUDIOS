@@ -1,0 +1,14 @@
+{
+  "name": "vikash-studios-rebrand",
+  "version": "1.0.0",
+  "description": "Vikash Studios Website Rebrand",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/css/input.css -o ./css/styles.css --minify",
+    "build:pages": "node build.js",
+    "build": "npm run build:css && npm run build:pages",
+    "dev": "tailwindcss -i ./src/css/input.css -o ./css/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
